@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>CS Global Rankings</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+width:100%;
+max-width:700px;
+padding:20px;
+}
+
+.card{
+background:linear-gradient(180deg,#1b212b,#161b22);
+border:1px solid rgba(255,255,255,.05);
+border-radius:18px;
+padding:40px;
+text-align:center;
+}
+
+h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#8b949e;
+margin-bottom:40px;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.menu-btn{
+display:block;
+padding:20px;
+background:#212936;
+border-radius:14px;
+text-decoration:none;
+color:white;
+font-size:20px;
+font-weight:700;
+transition:.2s;
+}
+
+.menu-btn:hover{
+transform:translateY(-2px);
+background:#2b3442;
+}
+
+.home-btn{
+display:inline-block;
+padding:10px 16px;
+background:#161b22;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:700;
+margin-bottom:20px;
+transition:.2s;
+}
+
+.home-btn:hover{
+background:#212936;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>CS Global Rankings</h1>
+
+<div class="subtitle">
+Choose a section
+</div>
+
+<div class="menu">
+
+<a class="menu-btn" href="standings.html">
+Standings
+</a>
+
+<a class="menu-btn" href="pickems.html">
+Pick'Ems
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

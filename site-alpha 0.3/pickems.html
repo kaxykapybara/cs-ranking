@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Pick'Ems</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+padding:30px;
+}
+
+.home-btn{
+display:inline-block;
+padding:10px 16px;
+background:#161b22;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:700;
+margin-bottom:30px;
+}
+
+.home-btn:hover{
+background:#212936;
+}
+
+.content{
+max-width:1000px;
+margin:auto;
+}
+
+.title{
+font-size:36px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#8b949e;
+}
+
+.tournament-card{
+display:block;
+width:320px;
+background:linear-gradient(180deg,#1b212b,#161b22);
+border:1px solid rgba(255,255,255,.05);
+border-radius:16px;
+padding:24px;
+text-decoration:none;
+color:white;
+transition:.25s;
+margin-top:25px;
+}
+
+.tournament-card:hover{
+transform:translateY(-4px);
+background:#202734;
+}
+
+.tournament-logo{
+width:120px;
+height:120px;
+object-fit:contain;
+display:block;
+margin:auto;
+margin-bottom:16px;
+}
+
+.tournament-name{
+font-size:22px;
+font-weight:700;
+text-align:center;
+margin-bottom:8px;
+}
+
+.tournament-stage{
+text-align:center;
+color:#8fa4c7;
+margin-bottom:6px;
+}
+
+.tournament-teams{
+text-align:center;
+color:#8b949e;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-btn">
+← Home
+</a>
+
+<div class="content">
+
+<div class="title">
+Pick'Ems
+</div>
+
+<div class="subtitle">
+Choose a tournament
+</div>
+
+<a class="tournament-card" href="iem-cologne-2026.html">
+
+<img
+src="logos/iem_cologne_2026.png"
+class="tournament-logo"
+alt="IEM Cologne Major 2026"
+>
+
+<div class="tournament-name">
+IEM Cologne Major 2026
+</div>
+
+<div class="tournament-stage">
+Playoffs Stage
+</div>
+
+<div class="tournament-teams">
+8 Teams
+</div>
+
+</a>
+
+</div>
+
+</body>
+</html>

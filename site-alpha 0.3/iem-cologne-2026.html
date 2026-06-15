@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>IEM Cologne Major 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="teammeta.js"></script>
+
+<script src="single-elimination.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+padding:30px;
+}
+
+.home-btn{
+display:inline-block;
+padding:10px 16px;
+background:#161b22;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:700;
+margin-bottom:30px;
+}
+
+.home-btn:hover{
+background:#212936;
+}
+
+.title{
+font-size:36px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#8b949e;
+margin-bottom:40px;
+}
+
+.bracket{
+display:flex;
+gap:80px;
+align-items:flex-start;
+overflow-x:auto;
+padding-bottom:20px;
+}
+
+#bracket{
+overflow-x:auto;
+padding-bottom:20px;
+}
+
+.bracket-canvas{
+position:relative;
+}
+
+.round-title{
+font-size:20px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.match{
+background:linear-gradient(
+180deg,
+#1b212b,
+#161b22
+);
+
+border:1px solid rgba(
+255,
+255,
+255,
+.05
+);
+
+border-radius:14px;
+
+overflow:hidden;
+}
+
+.team{
+height:60px;
+
+padding:14px;
+border-bottom:1px solid rgba(255,255,255,.05);
+
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.team:last-child{
+border-bottom:none;
+}
+
+.team-logo{
+width:28px;
+height:28px;
+object-fit:contain;
+flex-shrink:0;
+}
+
+.save-btn{
+background:#212936;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:10px;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+}
+
+.save-btn:hover{
+background:#2b3442;
+}
+
+.team.selectable{
+cursor:pointer;
+transition:.2s;
+}
+
+.team.selectable:hover{
+background:rgba(255,255,255,.05);
+}
+
+.team.selected{
+background:rgba(46,160,67,.25);
+}
+
+.team.selected:hover{
+background:rgba(46,160,67,.35);
+}
+
+#save-status{
+margin-left:12px;
+color:#8b949e;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="pickems.html" class="home-btn">
+← Back
+</a>
+
+<div class="title">
+IEM Cologne Major 2026
+</div>
+
+<div class="subtitle">
+Playoffs • 8 Teams
+</div>
+
+<div style="margin-bottom:30px;">
+    <button id="save-picks-btn" class="save-btn">
+        Save Picks
+    </button>
+
+    <span id="save-status"></span>
+</div>
+
+<div id="bracket"></div>
+
+<script>
+
+createSingleElimination({
+
+teams:[
+"Vitality",
+"Natus Vincere",
+"Spirit",
+"Falcons",
+"MOUZ",
+"FURIA",
+"G2",
+"The MongolZ"
+]
+
+});
+
+</script>
+
+</body>
+</html>
