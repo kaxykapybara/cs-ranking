@@ -8902,6 +8902,217 @@ nickname:"snow",
 country:"Brazil",
 photo:"",
 teamPhotos:{ "":"ps/ps-snow2.png", }
-}
+},
+
+"XTQZZZ":{
+nickname:"XTQZZZ",
+country:"France",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"hally":{
+nickname:"hally",
+country:"Russia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"B1ad3":{
+nickname:"B1ad3",
+country:"Ukraine",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"dastan":{
+nickname:"dastan",
+country:"Kazakhstan",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"Fabre":{
+nickname:"Fabre",
+country:"Türkiye",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"zonic":{
+nickname:"zonic",
+country:"Denmark",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"sycrone":{
+nickname:"sycrone",
+country:"Denmark",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"sidde":{
+nickname:"sidde",
+country:"Brazil",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"maaRaa":{
+nickname:"maaRaa",
+country:"Mongolia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"ruggah":{
+nickname:"ruggah",
+country:"Denmark",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"sAw":{
+nickname:"sAw",
+country:"Finland",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"coolio":{
+nickname:"coolio",
+country:"Hungary",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"kakafu":{
+nickname:"kakafu",
+country:"Austria",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"BIT":{
+nickname:"BIT",
+country:"Brazil",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"rikz":{
+nickname:"rikz",
+country:"Brazil",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"adrrr":{
+nickname:"adrrr",
+country:"Brazil",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"imd":{
+nickname:"imd",
+country:"Poland",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"xenn":{
+nickname:"xenn",
+country:"Germany",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"Fierce":{
+nickname:"Fierce",
+country:"Russia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"maddened":{
+nickname:"maddened",
+country:"Russia",
+flagshown:"Neutral",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"TOBIZ":{
+nickname:"TOBIZ",
+country:"Denmark",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"Bfull":{
+nickname:"Bfull",
+country:"Czechia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"dephh":{
+nickname:"dephh",
+country:"United Kingdom",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"coachi":{
+nickname:"coachi",
+country:"Portugal",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"horvy":{
+nickname:"horvy",
+country:"Brazil",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"LETN1":{
+nickname:"LETN1",
+country:"Serbia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"flashie":{
+nickname:"flashie",
+country:"Hungary",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"GUM":{
+nickname:"GUM",
+country:"China",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"viridian":{
+nickname:"viridian",
+country:"Australia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"AZR":{
+nickname:"AZR",
+country:"Australia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
 
 };
