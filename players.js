@@ -2753,7 +2753,7 @@ photo:"ps/ps-.png"
 },
 
 "Jab Jabich":{
-country:"World",
+country:"jab",
 photo:"ps/ps-.png"
 },
 

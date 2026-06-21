@@ -221,7 +221,7 @@ color:white;
 }
 
 .player-row.missed{
-opacity:.75;
+opacity:.5;
 }
 
 .player-flag{
@@ -237,6 +237,29 @@ font-size:11px;
 color:#ffd700;
 cursor:help;
 font-weight:700;
+}
+
+#floatingSearch{
+position:fixed;
+top:12px;
+left:50%;
+transform:translateX(-50%);
+z-index:9999;
+display:none;
+background:#182132;
+padding:10px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+#floatingInput{
+width:320px;
+padding:12px;
+border:none;
+border-radius:12px;
+background:#212936;
+color:white;
+outline:none;
 }
 
 </style>
@@ -287,6 +310,16 @@ Give Up
 </div>
 
 <div id="teamsContainer"></div>
+
+<div id="floatingSearch">
+
+<input
+id="floatingInput"
+placeholder="Type player name..."
+autocomplete="off"
+>
+
+</div>
 
 </div>
 
@@ -375,8 +408,8 @@ aliases:["tn1r","tnir","tNiR","tNIR"]
 
 coach:{
 name:"Jab Jabich",
-aliases:["Jab Jabich", "jab jabich"],
-sub:["hally"]
+aliases:["Jab Jabich", "jab jabich", "hally"],
+sub:"hally"
 }
 
 },
@@ -1567,12 +1600,22 @@ DON'T TOUCH BELOW
 let includeCoaches = false;
 let gameOver = false;
 let entries = [];
+const foundPlayers = new Set();
 
 const teamsContainer =
 document.getElementById("teamsContainer");
 
 const input =
 document.getElementById("guessInput");
+
+const floatingInput =
+document.getElementById("floatingInput");
+
+const inputRow =
+document.querySelector(".input-row");
+
+const floatingSearch =
+document.getElementById("floatingSearch");
 
 const foundCount =
 document.getElementById("foundCount");
@@ -1594,7 +1637,7 @@ aliases:player.aliases || [],
 sub:player.sub || "",
 team:team.team,
 coach:false,
-found:false
+found:foundPlayers.has(player.name)
 });
 
 });
@@ -1608,9 +1651,10 @@ team.coach.name
 entries.push({
 name:team.coach.name,
 aliases:team.coach.aliases || [],
+sub:team.coach.sub || "",
 team:team.team,
 coach:true,
-found:false
+found:foundPlayers.has(team.coach.name)
 });
 
 }
@@ -1623,8 +1667,13 @@ function render(){
 
 buildEntries();
 
-foundCount.textContent = "0";
-totalCount.textContent = entries.length;
+foundCount.textContent =
+entries.filter(
+e => e.found
+).length;
+
+totalCount.textContent =
+entries.length;
 
 teamsContainer.innerHTML = "";
 
@@ -1675,9 +1724,9 @@ team.coach.name
 
 html += `
 <div
-class="player-row hidden"
+class="player-row hidden coach-row"
 id="player-${team.coach.name}">
-?????
+Coach: ?????
 </div>
 `;
 
@@ -1690,6 +1739,18 @@ html += `
 card.innerHTML = html;
 
 teamsContainer.appendChild(card);
+
+});
+
+/* RE-REVEAL ALREADY FOUND PLAYERS */
+
+entries.forEach(entry=>{
+
+if(entry.found){
+
+revealPlayer(entry.name);
+
+}
 
 });
 
@@ -1725,22 +1786,23 @@ missed
 : "found"
 );
 
+let prefix = "";
+
+if(entry?.coach){
+prefix = "<strong>Coach:</strong> ";
+}
+
 row.innerHTML = `
+${prefix}
+
 <img
 class="player-flag"
-src="flags/${country}.svg">
+src="flags/${country}.svg"
+title="${country}">
 
 <span>
 ${name}
 </span>
-
-${
-entry?.coach
-?
-'<span class="coach-label">Coach</span>'
-:
-''
-}
 
 ${
 entry?.sub
@@ -1794,6 +1856,7 @@ guess
 
 entry.found =
 true;
+foundPlayers.add(entry.name);
 
 revealPlayer(
 entry.name
@@ -1809,6 +1872,7 @@ foundCount.textContent =
 found;
 
 input.value = "";
+floatingInput.value = "";
 
 }
 
@@ -1866,6 +1930,40 @@ render();
 
 }
 );
+
+window.addEventListener(
+"scroll",
+()=>{
+
+const rect =
+inputRow.getBoundingClientRect();
+
+if(rect.bottom < 0){
+
+floatingSearch.style.display =
+"block";
+
+}else{
+
+floatingSearch.style.display =
+"none";
+
+}
+
+});
+
+floatingInput.addEventListener(
+"input",
+()=>{
+
+input.value =
+floatingInput.value;
+
+input.dispatchEvent(
+new Event("input")
+);
+
+});
 
 render();
 
