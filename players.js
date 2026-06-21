@@ -2698,7 +2698,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/VY9tcsKjhzxZqdgqSFkCM3.png?ixlib=
 },
 
 "ay0k":{
-country:"Portugal",
+country:"Latvia",
 photo:"ps/ps-.png"
 },
 
@@ -2708,17 +2708,17 @@ photo:"ps/ps-.png"
 },
 
 "Nikodeon":{
-country:"Hungary",
+country:"Denmark",
 photo:"ps/ps-.png"
 },
 
 "opdust":{
-country:"Latvia",
+country:"Portugal",
 photo:"ps/ps-.png"
 },
 
 "xelex":{
-country:"Denmark",
+country:"Hungary",
 photo:"ps/ps-xelex.png"
 },
 
