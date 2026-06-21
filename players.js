@@ -2752,6 +2752,11 @@ country:"Brazil",
 photo:"ps/ps-.png"
 },
 
+"Jab Jabich":{
+country:"World",
+photo:"ps/ps-.png"
+},
+
 "Icarus":{
 country:"Portugal",
 photo:"https://img-cdn.hltv.org/playerbodyshot/-p2TZzXzkyoqsFhRo24ajZ.png?ixlib=java-2.1.0&w=400&s=a7b0cb0bf88d73074ca2e1ca5ecccfee"
