@@ -78,6 +78,12 @@ logo:"gamerlegion.png",
 color:"#3087F2"
 },
 
+"GamerLegion-old":{
+fullname:"GamerLegion",
+logo:"gamerlegion2.png",
+color:"#1938c4"
+},
+
 "Legacy":{
 fullname:"Legacy",
 logo:"legacy.png",
@@ -407,6 +413,12 @@ color:"#B53131"
 "Fluxo":{
 fullname:"Fluxo W7M",
 logo:"fluxow7m.png",
+color:"#FFFFFF"
+},
+
+"Fluxo-old":{
+fullname:"Fluxo",
+logo:"fluxo.png",
 color:"#FFFFFF"
 },
 
