@@ -284,6 +284,7 @@ backdrop-filter:blur(8px);
 }
 
 .win-content{
+position:relative;
 background:#182132;
 padding:40px;
 border-radius:24px;
@@ -291,6 +292,18 @@ text-align:center;
 animation:winPop .4s ease;
 box-shadow:
 0 0 40px rgba(35,134,54,.4);
+}
+
+.close-win{
+position:absolute;
+top:10px;
+right:10px;
+background:none;
+border:none;
+color:#8b949e;
+font-size:24px;
+cursor:pointer;
+font-weight:700;
 }
 
 .win-content h2{
@@ -393,6 +406,30 @@ autocomplete="off"
 >
 
 </div>
+
+</div>
+
+</div>
+
+<div id="winScreen">
+
+<div class="win-content">
+
+<button
+id="closeWinScreen"
+class="close-win">
+✕
+</button>
+
+<h2>
+🏆 Major Cleared
+</h2>
+
+<p id="winStats"></p>
+
+<button id="winTryAgain">
+Try Again
+</button>
 
 </div>
 
@@ -622,7 +659,7 @@ ${prefix}
 <img
 class="player-flag"
 src="../flags/${flagName}.svg"
-title="${flagName}"
+title="${flagName}">
 
 <span>
 ${name}
@@ -792,6 +829,111 @@ render();
 }
 );
 
+function resetQuiz(){
+
+foundPlayers.clear();
+
+entries.forEach(
+e => e.found = false
+);
+
+gameOver = false;
+
+giveUpConfirm = false;
+
+includeCoaches = false;
+
+document
+.getElementById(
+"coachToggle"
+)
+.classList.remove(
+"active"
+);
+
+document
+.getElementById(
+"winScreen"
+)
+.style.display =
+"none";
+
+document
+.getElementById(
+"giveUpBtn"
+)
+.style.display =
+"inline-block";
+
+document
+.getElementById(
+"tryAgainBtn"
+)
+.style.display =
+"none";
+
+input.value = "";
+floatingInput.value = "";
+
+render();
+
+}
+
+document
+.getElementById(
+"tryAgainBtn"
+)
+.addEventListener(
+"click",
+resetQuiz
+);
+
+const winTryAgain =
+document.getElementById(
+"winTryAgain"
+);
+
+if(winTryAgain){
+
+winTryAgain.addEventListener(
+"click",
+resetQuiz
+);
+
+}
+
+document
+.getElementById(
+"closeWinScreen"
+)
+.addEventListener(
+"click",
+()=>{
+
+document
+.getElementById(
+"winScreen"
+)
+.style.display =
+"none";
+
+document
+.getElementById(
+"giveUpBtn"
+)
+.style.display =
+"none";
+
+document
+.getElementById(
+"tryAgainBtn"
+)
+.style.display =
+"inline-block";
+
+}
+);
+
 window.addEventListener(
 "scroll",
 ()=>{
@@ -846,18 +988,6 @@ throw new Error(
 
 }
 
-if(!major){
-
-document.querySelector("h1")
-.textContent =
-"No major selected";
-
-throw new Error(
-"No major parameter"
-);
-
-}
-
 const majorScript =
 document.createElement("script");
 
@@ -883,19 +1013,6 @@ render();
 
 document.body.appendChild(
 majorScript
-);
-
-document
-.getElementById(
-"tryAgainBtn"
-)
-.addEventListener(
-"click",
-()=>{
-
-location.reload();
-
-}
 );
 
 function showWinScreen(){
@@ -989,38 +1106,7 @@ duration
 
 }
 
-document
-.getElementById(
-"winTryAgain"
-)
-.addEventListener(
-"click",
-()=>{
-
-location.reload();
-
-}
-);
-
 </script>
-
-<div id="winScreen">
-
-<div class="win-content">
-
-<h2>
-🏆 Major Cleared
-</h2>
-
-<p id="winStats"></p>
-
-<button id="winTryAgain">
-Try Again
-</button>
-
-</div>
-
-</div>
 
 </body>
 </html>

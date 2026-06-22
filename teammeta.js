@@ -138,6 +138,12 @@ logo:"faze.png",
 color:"#EB152A"
 },
 
+"FaZe-old":{
+fullname:"FaZe Clan",
+logo:"faze2.png",
+color:"#EB152A"
+},
+
 "BIG":{
 fullname:"BIG Clan",
 logo:"big.png",
@@ -148,6 +154,18 @@ color:"#ffffff"
 fullname:"M80",
 logo:"m80.png",
 color:"#B5EB15"
+},
+
+"M80-old":{
+fullname:"M80",
+logo:"m802.png",
+color:"#B5EB15"
+},
+
+"Complexity":{
+fullname:"Complexity",
+logo:"complexity.png",
+color:"#e2404d"
 },
 
 "Alliance":{
@@ -331,6 +349,12 @@ logo:"imperial.png",
 color:"#41D124"
 },
 
+"Imperial-old":{
+fullname:"Imperial Esports",
+logo:"imperial2.png",
+color:"#7ce467"
+},
+
 "Sashi":{
 fullname:"Sashi Esport",
 logo:"sashi.png",
@@ -452,6 +476,12 @@ logo:"og.png",
 color:"#3DAD89"
 },
 
+"OG-old":{
+fullname:"OG Esports",
+logo:"og2.png",
+color:"#462ece"
+},
+
 "FlyQuest":{
 fullname:"FlyQuest",
 logo:"flyquest.png",
@@ -563,6 +593,12 @@ color:"#731DB8"
 "Metizport":{
 fullname:"Metizport",
 logo:"metizport.png",
+color:"#24FF6D"
+},
+
+"Metizport-old":{
+fullname:"Metizport",
+logo:"metizport2.png",
 color:"#24FF6D"
 },
 

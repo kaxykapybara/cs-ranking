@@ -5072,6 +5072,51 @@ country:"United States",
 photo:"ps/ps-.png"
 },
 
+"adreN":{
+country:"United States",
+photo:"ps/ps-.png"
+},
+
+"RAiLWAY":{
+country:"Russia",
+photo:"ps/ps-.png"
+},
+
+"vinS":{
+country:"Poland",
+photo:"ps/ps-.png"
+},
+
+"Lambert":{
+country:"France",
+photo:"ps/ps-.png"
+},
+
+"boX":{
+country:"Belarus",
+photo:"ps/ps-.png"
+},
+
+"hampus":{
+country:"Sweden",
+photo:"ps/ps-.png"
+},
+
+"abdi":{
+country:"Sweden",
+photo:"ps/ps-.png"
+},
+
+"bobz":{
+country:"Brazil",
+photo:"ps/ps-.png"
+},
+
+"cool4st":{
+country:"Mongolia",
+photo:"ps/ps-.png"
+},
+
 "cmrn":{
 country:"United States",
 photo:"ps/ps-.png"
@@ -9117,6 +9162,27 @@ teamPhotos:{ "":"ps/ps-.png", }
 
 "Fierce":{
 nickname:"Fierce",
+country:"Russia",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"DeMars DeRover":{
+nickname:"DeMars DeRover",
+country:"Canada",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"wasiNk":{
+nickname:"wasiNk",
+country:"France",
+photo:"",
+teamPhotos:{ "":"ps/ps-.png", }
+},
+
+"F_1N":{
+nickname:"F_1N",
 country:"Russia",
 photo:"",
 teamPhotos:{ "":"ps/ps-.png", }
