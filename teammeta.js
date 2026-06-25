@@ -369,7 +369,7 @@ color:"#F20F6A"
 
 "Imperial":{
 fullname:"Gamdom Imperial",
-logo:"imperial.png",
+logo:"Imperial.png",
 color:"#41D124"
 },
 
@@ -676,7 +676,7 @@ color:"#FFFFFF"
 
 "UNiTY":{
 fullname:"UNiTY Esports",
-logo:"UNiTY.png",
+logo:"unity.png",
 color:"#d1668a"
 },
 
@@ -706,7 +706,7 @@ color:"#1db6ae"
 
 "BASEMENT BOYS":{
 fullname:"BASEMENT BOYS",
-logo:"BASMENT BOYS.png",
+logo:"basement.png",
 color:"#13ec75"
 },
 
@@ -718,7 +718,7 @@ color:"#ec1330"
 
 "Turma do Pagode":{
 fullname:"Turma do Pagode",
-logo:"Turma do Pagode.png",
+logo:"turma.png",
 color:"#1fa1b3"
 },
 
@@ -1300,7 +1300,7 @@ color:"#812232"
 
 "Imperial Academy":{
 fullname:"Imperial Academy",
-logo:"imperial.png",
+logo:"Imperial.png",
 color:"#11f830"
 },
 
