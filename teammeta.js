@@ -676,7 +676,7 @@ color:"#FFFFFF"
 
 "UNiTY":{
 fullname:"UNiTY Esports",
-logo:"UNiTY.png",
+logo:"unity.png",
 color:"#d1668a"
 },
 
@@ -694,19 +694,19 @@ color:"#ee710b"
 
 "GenOne":{
 fullname:"GenOne",
-logo:"genone.png",
+logo:"GenOne.png",
 color:"#da1751"
 },
 
 "EAC":{
 fullname:"Esport Academy Copenhagen",
-logo:"eac.png",
+logo:"EAC.png",
 color:"#1db6ae"
 },
 
 "BASEMENT BOYS":{
 fullname:"BASEMENT BOYS",
-logo:"basement.png",
+logo:"BASMENT BOYS.png",
 color:"#13ec75"
 },
 
@@ -718,7 +718,7 @@ color:"#ec1330"
 
 "Turma do Pagode":{
 fullname:"Turma do Pagode",
-logo:"turma.png",
+logo:"Turma do Pagode.png",
 color:"#1fa1b3"
 },
 
@@ -742,7 +742,7 @@ color:"#a4fa93"
 
 "STATE":{
 fullname:"STATE Esport",
-logo:"state.png",
+logo:"STATE.png",
 color:"#1df38f"
 },
 
