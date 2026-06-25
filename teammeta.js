@@ -676,7 +676,7 @@ color:"#FFFFFF"
 
 "UNiTY":{
 fullname:"UNiTY Esports",
-logo:"unity.png",
+logo:"UNiTY.png",
 color:"#d1668a"
 },
 
