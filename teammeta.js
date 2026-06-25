@@ -682,7 +682,7 @@ color:"#d1668a"
 
 "BRUTE":{
 fullname:"BRUTE",
-logo:"BRUTE.png",
+logo:"brute.png",
 color:"#FFFFFF"
 },
 
@@ -694,37 +694,37 @@ color:"#ee710b"
 
 "GenOne":{
 fullname:"GenOne",
-logo:"GenOne.png",
+logo:"genone.png",
 color:"#da1751"
 },
 
 "EAC":{
 fullname:"Esport Academy Copenhagen",
-logo:"EAC.png",
+logo:"eac.png",
 color:"#1db6ae"
 },
 
 "BASEMENT BOYS":{
 fullname:"BASEMENT BOYS",
-logo:"BASEMENT BOYS.png",
+logo:"basement.png",
 color:"#13ec75"
 },
 
 "Rebels":{
 fullname:"Rebels Gaming",
-logo:"Rebels.png",
+logo:"rebels.png",
 color:"#ec1330"
 },
 
 "Turma do Pagode":{
 fullname:"Turma do Pagode",
-logo:"Turma do Pagode.png",
+logo:"turma.png",
 color:"#1fa1b3"
 },
 
 "INOX Division":{
 fullname:"INOX Division",
-logo:"INOX Division.png",
+logo:"inox.png",
 color:"#a85c1d"
 },
 
@@ -742,19 +742,19 @@ color:"#a4fa93"
 
 "STATE":{
 fullname:"STATE Esport",
-logo:"STATE.png",
+logo:"state.png",
 color:"#1df38f"
 },
 
 "Chicken Coop":{
 fullname:"Chicken Coop Esports",
-logo:"Chicken Coop.png",
+logo:"chicken.png",
 color:"#a2c7ff"
 },
 
 "MOUZ NXT":{
 fullname:"MOUZ NXT",
-logo:"MOUZ.png",
+logo:"mouz.png",
 color:"#f50b0b"
 },
 
