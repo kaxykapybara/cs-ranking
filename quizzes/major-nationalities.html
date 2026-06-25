@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Major Nationalities</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+width:100%;
+max-width:900px;
+}
+
+.card{
+background:linear-gradient(180deg,#1b212b,#161b22);
+border:1px solid rgba(255,255,255,.05);
+border-radius:18px;
+padding:40px;
+}
+
+h1{
+font-size:42px;
+margin-bottom:10px;
+text-align:center;
+}
+
+.subtitle{
+color:#8b949e;
+margin-bottom:30px;
+text-align:center;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:12px;
+max-height:70vh;
+overflow-y:auto;
+padding-right:4px;
+}
+
+.menu-btn{
+display:block;
+padding:18px;
+background:#212936;
+border-radius:14px;
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:700;
+transition:.2s;
+}
+
+.menu-btn:hover{
+transform:translateY(-2px);
+background:#2b3442;
+}
+
+.home-btn{
+display:inline-block;
+padding:10px 16px;
+background:#161b22;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:700;
+margin-bottom:20px;
+transition:.2s;
+}
+
+.home-btn:hover{
+background:#212936;
+}
+
+.future-major{
+cursor:pointer;
+opacity:.7;
+}
+
+.future-major:hover{
+background:#3a2323;
+transform:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<a class="home-btn" href="../quizzes.html">
+← Back
+</a>
+
+<h1>Major Nationalities</h1>
+
+<div class="subtitle">
+Choose a Major
+</div>
+
+<div class="menu">
+
+<a class="menu-btn" href="nationalities.html?major=2013-dhw">
+DreamHack Winter 2013
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2014-katowice">
+EMS One Katowice 2014
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2014-cologne">
+ESL One Cologne 2014
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2014-dhw">
+DreamHack Winter 2014
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2015-katowice">
+ESL One Katowice 2015
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2015-cologne">
+ESL One Cologne 2015
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2015-cluj">
+DreamHack Open Cluj-Napoca 2015
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2016-columbus">
+MLG Major Championship: Columbus 2016
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2016-cologne">
+ESL One Cologne 2016
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2017-eleague">
+ELEAGUE Major 2017
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2017-krakow">
+PGL Major Kraków 2017
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2018-boston">
+ELEAGUE Major: Boston 2018
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2018-london">
+FACEIT Major: London 2018
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2019-katowice">
+IEM Katowice Major 2019
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2019-berlin">
+StarLadder Berlin Major 2019
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2020-rio">
+(Cancelled) ESL One: Rio Major 2020
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2021-stockholm">
+PGL Major Stockholm 2021
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2022-antwerp">
+PGL Major Antwerp 2022
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2022-rio">
+Intel Extreme Masters Rio Major 2022
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2023-paris">
+BLAST.tv Paris Major 2023
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2024-copenhagen">
+PGL Major Copenhagen 2024
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2024-shanghai">
+Perfect World Shanghai Major 2024
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2025-austin">
+BLAST.tv Austin Major 2025
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2025-budapest">
+StarLadder Budapest Major 2025
+</a>
+
+<a class="menu-btn" href="nationalities.html?major=2026-cologne">
+IEM Cologne Major 2026
+</a>
+
+<div
+class="menu-btn future-major"
+title="This Major has not been played yet, so nationality data is not available."
+onclick="alert('This Major has not been played yet, so nationality data is not available.')"
+>
+❌ PGL Singapore Major 2026
+</div>
+
+<div
+class="menu-btn future-major"
+title="This Major has not been played yet, so nationality data is not available."
+onclick="alert('This Major has not been played yet, so nationality data is not available.')"
+>
+❌ FiRe Major Buenos Aires 2027
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

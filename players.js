@@ -7462,8 +7462,38 @@ country:"United States",
 photo:"ps/ps-.png"
 },
 
+"PASHANOJ":{
+country:"Russia",
+photo:"ps/ps-.png"
+},
+
+"groove":{
+country:"Russia",
+photo:"ps/ps-.png"
+},
+
+"kane":{
+country:"Ukraine",
+photo:"ps/ps-.png"
+},
+
+"mithR":{
+country:"Denmark",
+photo:"ps/ps-.png"
+},
+
 "Panic":{
 country:"Canada",
+photo:"ps/ps-.png"
+},
+
+"keita":{
+country:"United Kingdom",
+photo:"ps/ps-.png"
+},
+
+"nak":{
+country:"Brazil",
 photo:"ps/ps-.png"
 },
 

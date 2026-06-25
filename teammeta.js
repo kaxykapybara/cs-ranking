@@ -144,6 +144,30 @@ logo:"faze2.png",
 color:"#EB152A"
 },
 
+"FaZe-old2":{
+fullname:"FaZe Clan",
+logo:"faze3.png",
+color:"#EB152A"
+},
+
+"Cloud9":{
+fullname:"FaZe Clan",
+logo:"faze3.png",
+color:"#0b80ec"
+},
+
+"Passion UA-old":{
+fullname:"Passion UA",
+logo:"passion2.png",
+color:"#2875ce"
+},
+
+"Complexity-old":{
+fullname:"Complexity Gaming",
+logo:"complexity2.png",
+color:"#121486"
+},
+
 "BIG":{
 fullname:"BIG Clan",
 logo:"big.png",

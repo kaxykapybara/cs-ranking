@@ -171,11 +171,6 @@ aliases:["blitz"]
 },
 
 {
-name:"Techno",
-aliases:["techno","techno4k","Techno"]
-},
-
-{
 name:"910",
 aliases:[]
 },
