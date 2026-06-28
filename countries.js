@@ -458,7 +458,8 @@ const countryData = {
         "Macedonia",
         "Republic of North Macedonia",
         "Severní Makedonie",
-        "Severni Makedonie"
+        "Severni Makedonie",
+        "Makedonie"
     ]
 },
 
@@ -560,7 +561,8 @@ const countryData = {
         "RSA",
         "Republic of South Africa",
         "Jižní Afrika",
-        "Jizni Afrika"
+        "Jizni Afrika",
+        "JAR"
     ]
 },
 
