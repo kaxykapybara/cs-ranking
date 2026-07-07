@@ -210,6 +210,12 @@ logo:"mibr.png",
 color:"#E8E8E8"
 },
 
+"MIBR fe":{
+fullname:"MIBR Female",
+logo:"mibr.png",
+color:"#E8E8E8"
+},
+
 "Nemesis":{
 fullname:"Team Nemesis",
 logo:"nemesis.png",
@@ -2064,6 +2070,60 @@ color:"#831a1a"
 fullname:"hindsight",
 logo:"x.png",
 color:"#ffffff"
+},
+
+"Echo":{
+fullname:"Echo",
+logo:"echo.png",
+color:"#ffffff"
+},
+
+"PCIFIC":{
+fullname:"PCIFIC Espor",
+logo:"pcific.png",
+color:"#08a4ff"
+},
+
+"los kogutos":{
+fullname:"los kogutos",
+logo:"los.png",
+color:"#fbff08"
+},
+
+"Washed":{
+fullname:"Washed",
+logo:"x.png",
+color:"#1808ff"
+},
+
+"ex-MANA":{
+fullname:"ex-MANA Esports",
+logo:"x.png",
+color:"#8ed3fc"
+},
+
+"roamsfiest":{
+fullname:"roamsfiest",
+logo:"x.png",
+color:"#ffffff"
+},
+
+"Mai Tai":{
+fullname:"Mai Tai",
+logo:"x.png",
+color:"#fffd9d"
+},
+
+"SAW Youngsters":{
+fullname:"SAW Youngsters",
+logo:"saw.png",
+color:"#d6d583"
+},
+
+"Noir Verse":{
+fullname:"Noir Verse",
+logo:"noir.png",
+color:"#fc8e8e"
 },
 
 "Oxuji":{

@@ -56,7 +56,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/OepRRBoc68iVojIfgK3JIA.png?ixlib=
 
 "kyousuke":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/ve31sdQzcMJkyiFnSXeb6N.png?ixlib=java-2.1.0&w=400&s=d4899537e795af7678cf94abdc1b80eb"
+photo:"https://img-cdn.hltv.org/playerbodyshot/hkLE4eILVbTT3QigB1gFqp.png?ixlib=java-2.1.0&w=400&s=3e95d87dd9b57017eddaacb6777db1a2"
 },
 
 "kyxsan":{
@@ -66,17 +66,17 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/g9Vcuk0D0lD2ZNoS8Ha0Vd.png?ixlib=
 
 "m0NESY":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/2Qa6QeoErj6A7sK82UHQm9.png?ixlib=java-2.1.0&w=400&s=850c8c8156891bf0ee5ca18f3490471d"
+photo:"https://img-cdn.hltv.org/playerbodyshot/Xn6RSL5KIFiD6hXiBseskM.png?ixlib=java-2.1.0&w=400&s=f65656a3af86ed20f055cc25e35dc8e9"
 },
 
 "NiKo":{
 country:"Bosnia and Herzegovina",
-photo:"https://img-cdn.hltv.org/playerbodyshot/tNeWr2qE97l9huJU1Whcr7.png?ixlib=java-2.1.0&w=400&s=38512dc753bcccd9712d6ff7ca8401e6"
+photo:"https://img-cdn.hltv.org/playerbodyshot/ZPB6zop8FumkqqbHl8BGos.png?ixlib=java-2.1.0&w=400&s=a81b4da0555bb1f3599bd3ca854f5515"
 },
 
 "TeSeS":{
 country:"Denmark",
-photo:"https://img-cdn.hltv.org/playerbodyshot/09IF7a6T90bzcmhtZ3zG6Z.png?ixlib=java-2.1.0&w=400&s=f145fc933f930f34a8d73a72e8feba3e"
+photo:"https://img-cdn.hltv.org/playerbodyshot/8WRqHyjmzJ6HqrG6ZkQ1Vh.png?ixlib=java-2.1.0&w=400&s=49e132ae6b4902017caa625d9206bca3"
 },
 
 
@@ -584,9 +584,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/EEnQR7JP45ECDWPxft2zHF.png?ixlib=
 
 "karrigan":{
 country:"Denmark",
-photo:"ps/karrigan.png",
-teamPhotos:{
-"Team Falcons":"https://img-cdn.hltv.org/playerbodyshot/xBsdjNQu8t41sc7_xp-oru.png?ixlib=java-2.1.0&w=400&s=47738ca474bcf7e62e15a39b2ff9f3e3",}
+photo:"https://img-cdn.hltv.org/playerbodyshot/4nm-v1aawxy5SUrv81H9JZ.png?ixlib=java-2.1.0&w=400&s=5dd93d8662a38f7eae1780cc2ba7dbe7",
 },
 
 "Twistzz":{
@@ -760,7 +758,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/Hrgronq0qBXzuGRTBTPVTK.png?ixlib=
 
 "bobeksde":{
 country:"Sweden",
-photo:"https://img-cdn.hltv.org/playerbodyshot/GqJxPl5gyb_9puqJQ5XTHx.png?ixlib=java-2.1.0&w=400&s=16cd5bf673cd9947e55d7e40cb7c1abd",
+photo:"https://img-cdn.hltv.org/playerbodyshot/SVv4FrwXdboh5H15ID-rHa.png?ixlib=java-2.1.0&w=400&s=debd275076d6c26b6eeb3aef20cae82f",
 teamPhotos:{
 "EYEBALLERS": "https://img-cdn.hltv.org/playerbodyshot/SVv4FrwXdboh5H15ID-rHa.png?ixlib=java-2.1.0&w=400&s=debd275076d6c26b6eeb3aef20cae82f"}
 },
@@ -1246,27 +1244,27 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/A1CSROtCratRrMi4bJpj66.png?ixlib=
 
 "AW":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/Ex_EZZDM56EJTl7RJ85r7F.png?ixlib=java-2.1.0&w=400&s=39f3fefda8522b48c2f2a6b6f6f7e1a7"
+photo:"https://img-cdn.hltv.org/playerbodyshot/iNXZbTXdW7oKSmcmVpyxQq.png?ixlib=java-2.1.0&w=400&s=30901923a43979232611990e8f4d88a3"
 },
 
 "MaSvAl":{
 country:"Belarus",
-photo:"https://img-cdn.hltv.org/playerbodyshot/v6xv-zTqlu95zZyev87uDe.png?ixlib=java-2.1.0&w=400&s=7887f83b5d6ea2a0098fdf2f5909cb4a"
+photo:"https://img-cdn.hltv.org/playerbodyshot/Vv4y6K8kF0TsFciwZCmIJY.png?ixlib=java-2.1.0&w=400&s=c775da9328ad207d716810d21d772bd2"
 },
 
 "mo0N":{
 country:"Kazakhstan",
-photo:"ps/ps-mo0n.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/5zYVdfzflM7JB7Yt0HMnzR.png?ixlib=java-2.1.0&w=400&s=aaa3bb11555277c0306ad66a1b160eae"
 },
 
 "sFade8":{
 country:"Ukraine",
-photo:"https://img-cdn.hltv.org/playerbodyshot/FbHOiVxzb_yzGfL5iHTv_J.png?ixlib=java-2.1.0&w=400&s=ba5334a4af11a7077fea8576e2325874"
+photo:"https://img-cdn.hltv.org/playerbodyshot/EE_HHHi_9E6iAftjtWhFpT.png?ixlib=java-2.1.0&w=400&s=fed63d2cc211a8aa2adbb47feaf9eec5"
 },
 
 "tenzy":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/P9VsTJ-UU64pPqKtuko1sw.png?ixlib=java-2.1.0&w=400&s=cc8a5856d9e0cc60a4358e1c3240cfd3"
+photo:"https://img-cdn.hltv.org/playerbodyshot/3hYN7E67S3HtevFjiN5dE_.png?ixlib=java-2.1.0&w=400&s=4fa5233e6a18951b28b520c26a13df5d"
 },
 
 
@@ -2754,7 +2752,7 @@ photo:"ps/ps-.png"
 
 "fer":{
 country:"Brazil",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/0wByIKmMndjpZZS9V6_485.png?ixlib=java-2.1.0&w=400&s=c405eb54d75015b10b2dca87231b04b6"
 },
 
 "Jab Jabich":{
@@ -3259,7 +3257,7 @@ photo:"ps/ps-.png"
 
 "def1zer":{
 country:"Kazakhstan",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/tIUdJ8iITQ9elC7VJm8ri0.png?ixlib=java-2.1.0&w=400&s=aa7226e9636162eb42f18907a84e3a43"
 },
 
 "ICY":{
@@ -3434,7 +3432,7 @@ photo:"ps/ps-.png"
 
 "Polbandana":{
 country:"Ukraine",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/4ZT27yAJ4rLeWT2lPrHJlM.png?ixlib=java-2.1.0&w=400&s=e37e0b421523862d1b01008b47096a9b"
 },
 
 "arTisT":{
@@ -3649,7 +3647,7 @@ photo:"ps/ps-.png"
 
 "Ltz":{
 country:"Brazil",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/S1DO1lSTNFWZVh_H5KAnml.png?ixlib=java-2.1.0&w=400&s=49793494f9ad5ffb0fc1e7e3c2b9edd6"
 },
 
 "remix":{
@@ -3659,17 +3657,17 @@ photo:"ps/ps-.png"
 
 "adai":{
 country:"Kazakhstan",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/Nny4m8tScwRXNUELzEnS4D.png?ixlib=java-2.1.0&w=400&s=b84127e5472dff1f2b80e5ecdf651faf"
 },
 
 "Botpa1":{
 country:"Kazakhstan",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/z2gjsCnMlY8MLAVya0rgiM.png?ixlib=java-2.1.0&w=400&s=b52aa6c2288397b26a292d4b9e1df18e"
 },
 
 "dan4o":{
 country:"Kazakhstan",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/Te3ZN-qq4VAeG2N90dTNfu.png?ixlib=java-2.1.0&w=400&s=82f50cb25ef8582334d95021c0b84a8f"
 },
 
 "Maison":{
@@ -3809,7 +3807,7 @@ photo:"ps/ps-.png"
 
 "freshie":{
 country:"Canada",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/W5jCqnM34ybOKtmtTdeN3V.png?ixlib=java-2.1.0&w=400&s=a868b3f88717c31000c7468f0b07c869"
 },
 
 "marekiew":{
@@ -3819,7 +3817,7 @@ photo:"ps/ps-.png"
 
 "ogwizard":{
 country:"United States",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/g8vBqtvHGCHo2WLW1Ah-ok.png?ixlib=java-2.1.0&w=400&s=9c83af3c0d9ff2793892f53d4fb2f0f7"
 },
 
 "WUMBO":{
@@ -3924,7 +3922,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/D40wte8L8uP1vdpqo5p5UG.png?ixlib=
 
 "jared":{
 country:"United States",
-photo:"https://img-cdn.hltv.org/playerbodyshot/sF59pGhAT2T0yLlp6a-HLH.png?ixlib=java-2.1.0&w=400&s=2d764f23931bd14a1aa35835ea6c1d89"
+photo:"https://img-cdn.hltv.org/playerbodyshot/it31XgcnCSwE5ABXNJ24s-.png?ixlib=java-2.1.0&w=400&s=e6c7001fe6eddd0896252842c46fe681"
 },
 
 "mds":{
@@ -4054,7 +4052,7 @@ photo:"ps/ps-.png"
 
 "Kursy":{
 country:"France",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/iXu7ocwcsKYJCUDSZOpFw2.png?ixlib=java-2.1.0&w=400&s=a50d36bf26695afaaf661bf0a4516890"
 },
 
 "Magisk":{
@@ -4299,27 +4297,27 @@ photo:"ps/ps-.png"
 
 "DAN9ARMATURA":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/sCoEU2e9derxJU-xMQAywF.png?bg=3e4c54&h=200&ixlib=java-2.1.0&rect=121%2C8%2C467%2C467&w=200&s=dfdd341bed7e760e47460724e0dfeddb"
+photo:"https://img-cdn.hltv.org/playerbodyshot/sCoEU2e9derxJU-xMQAywF.png?ixlib=java-2.1.0&w=400&s=41659128a8018690171ca7ce16bb09c6"
 },
 
 "dezl3bio":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/Vg1foSGwn9tbwIPbxTCWM5.png?bg=3e4c54&h=200&ixlib=java-2.1.0&rect=121%2C4%2C467%2C467&w=200&s=76ffd4b437ddcde444ce179a088a559a"
+photo:"https://img-cdn.hltv.org/playerbodyshot/Vg1foSGwn9tbwIPbxTCWM5.png?ixlib=java-2.1.0&w=400&s=48eac0fcf8075357f0c5fcdfa0f6b905"
 },
 
 "pleynnn":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/Sm7kH-j19PAZykChRV2qB8.png?bg=3e4c54&h=200&ixlib=java-2.1.0&rect=121%2C8%2C467%2C467&w=200&s=9d4a91b674301ebd18f0d4d236ade269"
+photo:"https://img-cdn.hltv.org/playerbodyshot/Sm7kH-j19PAZykChRV2qB8.png?ixlib=java-2.1.0&w=400&s=0ca8d72f7aea6a994e02fb91b5d845ca"
 },
 
 "SquEzxc":{
 country:"Belarus",
-photo:"https://img-cdn.hltv.org/playerbodyshot/opyUAwXhmfENXtAji3kd9a.png?bg=3e4c54&h=200&ixlib=java-2.1.0&rect=124%2C4%2C467%2C467&w=200&s=3b11e19003e22cb1c07f941208b5d49b"
+photo:"https://img-cdn.hltv.org/playerbodyshot/opyUAwXhmfENXtAji3kd9a.png?ixlib=java-2.1.0&w=400&s=69ce48a201af29c5d64d60c2404262f2"
 },
 
 "tw1sterzaza":{
 country:"Belarus",
-photo:"https://img-cdn.hltv.org/playerbodyshot/052D73vX-lY9rizypGuDEZ.png?bg=3e4c54&h=200&ixlib=java-2.1.0&rect=121%2C8%2C467%2C467&w=200&s=d7ac607d7e6ae8f91cba158722279590"
+photo:"https://img-cdn.hltv.org/playerbodyshot/052D73vX-lY9rizypGuDEZ.png?ixlib=java-2.1.0&w=400&s=6abe68ae5c9bd2c938ac1cf9f10b35f5"
 },
 
 "957":{

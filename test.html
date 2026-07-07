@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>CS Global Rankings</title>
+<title>Swiss Simulator Test</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -25,969 +24,119 @@ padding:30px;
 }
 
 .container{
-max-width:1100px;
+max-width:1800px;
 margin:auto;
-padding-left:180px;
 }
 
-.sidebar{
-position:fixed;
-left:20px;
-top:20px;
-width:220px;
-z-index:1000;
-}
-
-.sidebar-card{
-background:#161b22;
-border:1px solid rgba(255,255,255,.05);
-border-radius:14px;
-padding:18px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.sidebar-title{
-font-size:18px;
-font-weight:700;
-margin-bottom:12px;
-}
-
-.sidebar-link{
-width:100%;
-background:#212936;
-border:none;
-color:white;
-padding:12px;
-border-radius:10px;
-cursor:pointer;
-font-weight:700;
-transition:.2s;
-text-align:left;
-}
-
-.sidebar-link:hover{
-background:#2b3442;
-}
-
-.sidebar-subtitle{
-font-size:11px;
-color:#8b949e;
-margin-top:4px;
-}
-
-.header{
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
+h1{
+text-align:center;
 margin-bottom:25px;
-gap:20px;
+font-size:42px;
 }
 
-.left-side{
+.swiss{
+display:flex;
+gap:28px;
+align-items:flex-start;
+overflow-x:auto;
+padding-bottom:20px;
+}
+
+.column{
 display:flex;
 flex-direction:column;
+gap:14px;
+min-width:250px;
 }
 
-
-
-.title{
-font-size:36px;
+.column-title{
+font-size:22px;
 font-weight:700;
-}
-
-.subtitle{
-font-size:13px;
+text-align:center;
+margin-bottom:8px;
 color:#8b949e;
-margin-top:5px;
 }
 
-
-
-.filters{
-display:flex;
-gap:12px;
-margin-top:18px;
-}
-
-.filter-btn{
-padding:8px 18px;
-border-radius:999px;
-font-size:13px;
-font-weight:700;
-cursor:pointer;
-transition:.2s;
-border:none;
-color:white;
-opacity:.65;
-}
-
-.filter-btn:hover{
-opacity:1;
-transform:translateY(-1px);
-}
-
-.filter-btn.active{
-opacity:1;
-}
-
-.filter-eu{
-background:#2563eb;
-box-shadow:0 0 14px rgba(37,99,235,.55);
-}
-
-.filter-am{
-background:#dc2626;
-box-shadow:0 0 14px rgba(220,38,38,.55);
-}
-
-.filter-as{
-background:#eab308;
-color:black;
-box-shadow:0 0 14px rgba(234,179,8,.55);
-}
-
-
-
-.search{
-background:#161b22;
-border:none;
-outline:none;
-padding:12px 16px;
-border-radius:10px;
-color:white;
-width:260px;
-font-size:14px;
-height:45px;
-}
-
-
-
-.rankings{
-display:flex;
-flex-direction:column;
-gap:12px;
-}
-
-
-
-.team-card{
-position:relative;
-background:linear-gradient(180deg,#1b212b,#161b22);
+.match{
+background:#1b212b;
 border-radius:14px;
-border:1px solid rgba(255,255,255,.05);
 overflow:hidden;
-transition:.3s;
-cursor:pointer;
+border:1px solid rgba(255,255,255,.06);
 }
 
-.team-card:hover{
-transform:translateY(-2px);
-background:#202734;
-box-shadow:0 8px 25px rgba(0,0,0,.4);
-}
-
-.team-card::before{
-content:"";
-position:absolute;
-left:0;
-top:0;
-width:4px;
-height:100%;
-background:var(--team-color);
-box-shadow:0 0 12px var(--team-color);
-}
-
-
-
-.team-main{
-display:flex;
-align-items:center;
-padding:18px 22px;
-min-height:108px;
-}
-
-
-
-.rank{
-width:60px;
-font-size:24px;
-font-weight:700;
-color:#b4bcc8;
-}
-
-
-
-.logo{
-width:70px;
-height:70px;
-margin-right:24px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.logo img{
-max-width:100%;
-max-height:100%;
-object-fit:contain;
-}
-
-
-
-.team-info{
-flex:1;
-}
-
-.team-name-row{
+.team{
+height:58px;
 display:flex;
 align-items:center;
 gap:10px;
-margin-bottom:6px;
+padding:0 14px;
+border-bottom:1px solid rgba(255,255,255,.05);
+background:#212936;
+cursor:grab;
 }
 
-.team-name{
-font-size:24px;
+.team:last-child{
+border-bottom:none;
+}
+
+.team img{
+width:28px;
+height:28px;
+object-fit:contain;
+}
+
+.team span{
 font-weight:700;
 }
 
-.team-flag{
-width:24px;
-height:17px;
-object-fit:cover;
-border-radius:4px;
-}
-
-.points{
-font-size:14px;
-color:#8fa4c7;
-}
-
-.roster{
-font-size:13px;
-color:#7d8590;
-transition:.25s;
-}
-
-.team-card.open .roster{
-opacity:0;
-max-height:0;
-overflow:hidden;
-margin-top:-6px;
-}
-
-
-
-.region-badge{
-margin-left:auto;
-padding:6px 12px;
-border-radius:999px;
-font-size:11px;
-font-weight:800;
-letter-spacing:.6px;
-color:white;
-}
-
-.region-eu{
-background:#2563eb;
-box-shadow:0 0 12px rgba(37,99,235,.5);
-}
-
-.region-am{
-background:#dc2626;
-box-shadow:0 0 12px rgba(220,38,38,.5);
-}
-
-.region-as{
-background:#eab308;
-color:black;
-box-shadow:0 0 12px rgba(234,179,8,.5);
-}
-
-
-
-.arrow{
-font-size:18px;
-color:#8b949e;
-margin-left:18px;
-transition:.3s;
-}
-
-.team-card.open .arrow{
-transform:rotate(180deg);
-}
-
-
-
-.team-extra{
-max-height:0;
-overflow:hidden;
-opacity:0;
-transition:.35s ease;
-}
-
-.team-card.open .team-extra{
-max-height:520px;
-opacity:1;
-padding:0 22px 22px 22px;
-}
-
-
-
-.team-extra-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:16px;
-margin-top:4px;
-width:100%;
-}
-
-
-
-.player-card{
-background:#11161f;
-border:1px solid rgba(255,255,255,.05);
-border-radius:16px;
-overflow:hidden;
-transition:.25s;
-}
-
-.player-card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 24px rgba(0,0,0,.45);
-}
-
-
-
-.player-image{
-height:175px;
-background:#0b1017;
-overflow:hidden;
-position:relative;
-display:flex;
-align-items:flex-start;
-justify-content:center;
-}
-
-.player-image img{
-width:100%;
-height:auto;
-object-fit:contain;
-object-position:center top;
-transform:scale(1.36) translateY(30px);
-filter:drop-shadow(0 10px 20px rgba(0,0,0,.45));
-}
-
-
-
-.player-info{
-padding:12px;
+.placeholder{
+height:58px;
 display:flex;
 align-items:center;
-gap:8px;
 justify-content:center;
-}
-
-.player-info img{
-width:18px;
-height:13px;
-object-fit:cover;
-border-radius:3px;
-flex-shrink:0;
-}
-
-.player-name{
-font-size:15px;
+background:#212936;
+color:#67758d;
 font-weight:700;
+}
+
+.record-group{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.record-slot{
+height:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#182132;
+border:2px dashed #3a465b;
+border-radius:14px;
+font-weight:700;
+color:#7c8798;
+transition:.15s;
+}
+
+.record-slot.dragover{
+border-color:#2ea043;
+background:#203226;
 color:white;
 }
 
 </style>
-
 </head>
-
 <body>
-
-<div class="sidebar">
-
-<div class="sidebar-card">
-
-<div class="sidebar-title">
-Rankings
-</div>
-
-<button
-class="sidebar-link"
-id="experimentalBtn"
->
-
-Beyond 100
-
-<div class="sidebar-subtitle">
-Experimental
-</div>
-
-</button>
-
-<button
-class="sidebar-link"
-id="regionalBtn"
->
-
-Regional Rankings
-
-<div class="sidebar-subtitle">
-Global Mode
-</div>
-
-</button>
-
-</div>
-
-</div>
 
 <div class="container">
 
-<div class="header">
+<h1>Swiss Stage Prototype</h1>
 
-<div class="left-side">
-
-<div class="title">
-CS Global Rankings
-</div>
-
-<div class="subtitle">
-Updated May 2026
-</div>
-
-
-
-<div class="filters">
-
-<button class="filter-btn filter-eu active" data-region="eu">
-EUROPE
-</button>
-
-<button class="filter-btn filter-am active" data-region="am">
-AMERICA
-</button>
-
-<button class="filter-btn filter-as active" data-region="as">
-ASIA
-</button>
+<div id="swiss" class="swiss"></div>
 
 </div>
 
-</div>
+<script src="swiss.js"></script>
 
-
-
-<input
-class="search"
-placeholder="Search team..."
-id="searchInput"
-/>
-
-</div>
-
-
-
-<div class="rankings" id="rankings"></div>
-
-
-
-<script src="countries.js"></script>
-<script src="players.js"></script>
-
-<script src="teammeta.js"></script>
-
-<script>
-
-let teams=[];
-let showBeyond100=false;
-let regionalMode=false;
-
-
-function determineFlag(players){
-
-const countryCount={};
-const continentCount={};
-
-players.forEach(player=>{
-
-const playerInfo=playerData[player];
-
-if(!playerInfo) return;
-
-const country=playerInfo.country;
-
-countryCount[country]=(countryCount[country]||0)+1;
-
-const countryInfo=countryData[country];
-
-if(!countryInfo) return;
-
-const continent=countryInfo.continent;
-
-continentCount[continent]=(continentCount[continent]||0)+1;
-
-});
-
-for(const country in countryCount){
-
-if(countryCount[country]>=3){
-return country;
-}
-
-}
-
-for(const continent in continentCount){
-
-if(continentCount[continent]>=3){
-return continent;
-}
-
-}
-
-return "World";
-
-}
-
-
-
-function determineRegion(players){
-
-const regionCount={};
-
-players.forEach(player=>{
-
-const playerInfo=playerData[player];
-
-if(!playerInfo) return;
-
-const countryInfo=countryData[playerInfo.country];
-
-if(!countryInfo) return;
-
-const region=countryInfo.vrs;
-
-regionCount[region]=(regionCount[region]||0)+1;
-
-});
-
-let highestRegion="eu";
-let highestCount=0;
-
-for(const region in regionCount){
-
-if(regionCount[region]>highestCount){
-
-highestCount=regionCount[region];
-highestRegion=region;
-
-}
-
-}
-
-return highestRegion;
-
-}
-
-
-
-async function loadStandings(){
-
-const response=
-await fetch("standings_global_2026_05_04.md");
-
-const markdown=
-await response.text();
-
-const lines=
-markdown.split("\n");
-
-teams=[];
-
-for(const line of lines){
-
-if(!line.startsWith("|"))
-continue;
-
-const cols=line
-.split("|")
-.map(x=>x.trim());
-
-if(cols.length<6)
-continue;
-
-const rank=
-parseInt(cols[1]);
-
-const points=
-parseInt(cols[2]);
-
-if(isNaN(rank)||isNaN(points))
-continue;
-
-if(!showBeyond100 && rank > 100)
-continue;
-
-const sourceName=
-cols[3];
-
-const roster=
-cols[4];
-
-const players=
-roster
-.split(",")
-.map(x=>x.trim());
-
-const meta=
-teamMeta[sourceName]||{};
-
-teams.push({
-
-rank,
-
-points,
-
-sourceName,
-
-team:
-meta.fullname||
-sourceName,
-
-players,
-
-logo:
-meta.logo||
-"default.png",
-
-color:
-meta.color||
-"#3b82f6",
-
-rewriteFlag:
-meta.rewriteFlag,
-
-rewriteVRS:
-meta.rewriteVRS
-
-});
-
-}
-
-renderTeams();
-
-}
-
-
-
-function renderTeams(){
-
-const rankings=
-document.getElementById("rankings");
-
-rankings.innerHTML="";
-
-const regionalRanks={
-eu:0,
-am:0,
-as:0
-};
-
-teams.forEach(team=>{
-
-const autoFlag=
-determineFlag(team.players);
-
-const autoRegion=
-determineRegion(team.players);
-
-const flag=
-team.rewriteFlag||
-autoFlag;
-
-const region=
-team.rewriteVRS||
-autoRegion;
-
-const displayRank=
-regionalMode
-? ++regionalRanks[region]
-: team.rank;
-
-rankings.innerHTML+=`
-
-<div
-class="team-card"
-data-region="${region}"
-style="--team-color:${team.color}"
->
-
-<div class="team-main">
-
-<div class="rank">
-#${displayRank}
-</div>
-
-<div class="logo">
-<img src="logos/${team.logo}">
-</div>
-
-<div class="team-info">
-
-<div class="team-name-row">
-
-<div class="team-name">
-${team.team}
-</div>
-
-<img
-class="team-flag"
-src="flags/${flag}.svg"
-title="${flag}"
->
-
-<div class="points">
-${team.points} pts
-</div>
-
-<div class="region-badge region-${region}">
-${region==="eu"
-?"EUROPE"
-:region==="am"
-?"AMERICA"
-:"ASIA"}
-</div>
-
-</div>
-
-<div class="roster">
-${team.players.join(" • ")}
-</div>
-
-</div>
-
-<div class="arrow">
-▲
-</div>
-
-</div>
-
-<div class="team-extra">
-
-<div class="team-extra-grid">
-
-${team.players.map(player=>{
-
-const data=
-playerData[player];
-
-if(!data) return "";
-
-const flagShown=
-data.flagshown||
-data.country;
-
-const photo=
-data.teamPhotos?.[team.team]
-||
-data.photo
-||
-"photos/default.png";
-
-return`
-
-<div class="player-card">
-
-<div class="player-image">
-
-<img
-src="${photo}"
-alt="${player}"
->
-
-</div>
-
-<div class="player-info">
-
-<img
-src="flags/${flagShown}.svg"
-title="${flagShown}"
->
-
-<div class="player-name">
-${player}
-</div>
-
-</div>
-
-</div>
-
-`;
-
-}).join("")}
-
-</div>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-attachCardEvents();
-
-}
-
-
-
-function attachCardEvents(){
-
-document
-.querySelectorAll(".team-card")
-.forEach(card=>{
-
-card.addEventListener("click",()=>{
-
-card.classList.toggle("open");
-
-});
-
-});
-
-}
-
-
-
-const activeRegions={
-
-eu:true,
-am:true,
-as:true
-
-};
-
-
-
-document
-.querySelectorAll(".filter-btn")
-.forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-const region=
-button.dataset.region;
-
-activeRegions[region]=
-!activeRegions[region];
-
-button.classList.toggle("active");
-
-applyFilters();
-
-});
-
-});
-
-
-
-document
-.getElementById("searchInput")
-.addEventListener("keyup",()=>{
-
-applyFilters();
-
-});
-
-
-
-function applyFilters(){
-
-const search=
-document
-.getElementById("searchInput")
-.value
-.toLowerCase();
-
-document
-.querySelectorAll(".team-card")
-.forEach(card=>{
-
-const matchesSearch=
-card.innerText
-.toLowerCase()
-.includes(search);
-
-const matchesRegion=
-activeRegions[
-card.dataset.region
-];
-
-card.style.display=
-(matchesSearch&&matchesRegion)
-?"block"
-:"none";
-
-});
-
-}
-
-document
-.getElementById("experimentalBtn")
-.addEventListener("click",()=>{
-
-showBeyond100=!showBeyond100;
-
-const button=
-document.getElementById("experimentalBtn");
-
-button.innerHTML=
-showBeyond100
-? `Top 100 Only
-<div class="sidebar-subtitle">
-Default
-</div>`
-: `Beyond 100
-<div class="sidebar-subtitle">
-Experimental
-</div>`;
-
-loadStandings();
-
-});
-
-document
-.getElementById("regionalBtn")
-.addEventListener("click",()=>{
-
-regionalMode=!regionalMode;
-
-const button=
-document.getElementById("regionalBtn");
-
-button.innerHTML=
-regionalMode
-? `Global Rankings
-<div class="sidebar-subtitle">
-Regional Mode
-</div>`
-: `Regional Rankings
-<div class="sidebar-subtitle">
-Global Mode
-</div>`;
-
-renderTeams();
-
-});
-
-loadStandings();
-
-</script>
 </body>
 </html>
