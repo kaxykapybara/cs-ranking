@@ -193,12 +193,17 @@ transform:translateY(-2px);
 background:#2563eb;
 }
 
+.player-column.leave,
+.team-card.leave{
+background:#dc2626;
+}
+
 .player-column.stay{
 background:#16a34a;
 }
 
-.player-column.leave{
-background:#dc2626;
+.team-card.stay{
+background:#0f6d32;
 }
 
 #rouletteOverlay{
@@ -311,6 +316,10 @@ box-shadow:0 25px 70px rgba(0,0,0,.6);
 animation:signAppear .35s;
 }
 
+.team-card.scanning{
+background:#2563eb;
+}
+
 #signingCard img{
 width:320px;
 height:380px;
@@ -344,7 +353,25 @@ transform:scale(1);
 }
 }
 
+.team-card.disband{
 
+background:#dc2626;
+
+}
+
+.team-card.flyaway{
+
+transition:transform 1.8s cubic-bezier(.2,.9,.2,1),
+opacity 1.8s;
+
+transform:
+translate(120vw,-120vh)
+rotate(35deg)
+scale(.5);
+
+opacity:0;
+
+}
 
 </style>
 
@@ -483,6 +510,7 @@ async function showSigning(player,index){
 const overlay=document.getElementById("signingOverlay");
 
 overlay.style.display="flex";
+document.getElementById("signingLabel").innerText="NEW SIGNING";
 
 document.getElementById("signingPhoto").src=
 playerData[player].photo;
@@ -510,6 +538,26 @@ renderTeam();
 async function scanRoster(){
 
 const team=offseasonData[currentTeam];
+
+if(team.disband){
+
+    await showDisband(team);
+    return;
+
+}
+
+console.log(team);
+console.log(team.replacementTeam);
+
+console.log(team);
+
+if(team.replacementTeam){
+
+    console.log("TEAM TAKEOVER!");
+
+    await showTeamTakeover(team);
+
+}
 
 for(let i=0;i<team.players.length;i++){
 
@@ -544,6 +592,8 @@ scanState[i]="stay";
 }
 
 }
+
+document.querySelector(".team-card").classList.remove("stay");
 
 }
 
@@ -591,8 +641,6 @@ pool.push(name);
 
 });
 
-pool.sort(()=>Math.random()-.5);
-
 const entries=[];
 
 for(let i=0;i<4;i++){
@@ -607,23 +655,24 @@ const stopIndex=entries.length-25-Math.floor(Math.random()*20);
 
 entries.splice(stopIndex,0,winner);
 
+let html="";
+
 entries.forEach(name=>{
 
-const player=playerData[name];
+    const player=playerData[name];
 
-list.innerHTML+=`
+    if(!player) return;
 
-<div class="roulettePlayer">
-
-<img src="flags/${player.country}.svg">
-
-${name}
-
-</div>
-
-`;
+    html+=`
+    <div class="roulettePlayer">
+        <img src="flags/${player.country}.svg">
+        ${name}
+    </div>
+    `;
 
 });
+
+list.innerHTML=html;
 
 list.style.transition="none";
 list.style.transform="translateY(0px)";
@@ -701,6 +750,204 @@ resolve();
 
 }
 
+async function showTeamRoulette(team){
+
+return new Promise(resolve=>{
+
+const overlay=document.getElementById("rouletteOverlay");
+const title=document.querySelector(".rouletteTitle");
+const list=document.getElementById("rouletteList");
+
+title.innerText="Searching New Organisation";
+
+overlay.style.display="flex";
+list.innerHTML="";
+
+const entries=[];
+
+const teams=Object.keys(teamMeta);
+
+for(let i=0;i<4;i++){
+
+const shuffled=[...teams].sort(()=>Math.random()-.5);
+
+entries.push(...shuffled);
+
+}
+
+const stopIndex=entries.length-25-Math.floor(Math.random()*20);
+
+entries.splice(stopIndex,0,team.replacementTeam);
+
+let html="";
+
+entries.forEach(name=>{
+
+html+=`
+<div class="roulettePlayer">
+<img src="logos/${teamMeta[name].logo}">
+${teamMeta[name].fullname}
+</div>
+`;
+
+});
+
+list.innerHTML=html;
+
+list.style.transition="none";
+list.style.transform="translateY(0px)";
+
+const highlight=setInterval(()=>{
+
+const transform=getComputedStyle(list).transform;
+
+if(transform==="none") return;
+
+const values=transform.match(/matrix.*\((.+)\)/);
+
+if(!values) return;
+
+const y=Math.abs(parseFloat(values[1].split(",")[5]));
+
+const current=Math.round((y+125)/50);
+
+document
+.querySelectorAll(".roulettePlayer")
+.forEach((player,index)=>{
+
+player.classList.toggle("active",index===current);
+
+});
+
+},20);
+
+setTimeout(()=>{
+
+const duration=8+Math.random()*3;
+
+const offset=Math.random()*40-20;
+
+list.style.transition=
+`transform ${duration}s cubic-bezier(.08,.92,.18,1)`;
+
+list.style.transform=
+`translateY(-${stopIndex*50-125+offset}px)`;
+
+setTimeout(async()=>{
+
+clearInterval(highlight);
+
+list.style.transition="transform .25s ease-out";
+list.style.transform=
+`translateY(-${stopIndex*50-125}px)`;
+
+await sleep(250);
+
+await showOrganisationSigning(team.replacementTeam);
+
+overlay.style.display="none";
+
+title.innerText="Signing Replacement";
+
+resolve();
+
+},duration*1000);
+
+},50);
+
+});
+
+}
+
+async function showDisband(team){
+
+const card=document.querySelector(".team-card");
+
+card.classList.add("scanning");
+
+await sleep(1200);
+
+card.classList.remove("scanning");
+
+card.classList.add("leave");
+
+await sleep(1000);
+
+card.classList.remove("leave");
+card.classList.add("disband");
+
+await sleep(700);
+
+card.classList.add("flyaway");
+
+await sleep(1800);
+
+}
+
+async function showOrganisationSigning(teamName){
+
+const overlay=document.getElementById("signingOverlay");
+
+document.getElementById("signingPhoto").src=
+"logos/"+teamMeta[teamName].logo;
+
+document.getElementById("signingName").innerText=
+teamMeta[teamName].fullname;
+
+document.querySelector(".signingLabel").innerText=
+"NEW ORGANISATION";
+
+overlay.style.display="flex";
+
+await sleep(2500);
+
+overlay.style.display="none";
+
+document.querySelector(".signingLabel").innerText=
+"NEW SIGNING";
+
+}
+
+async function showTeamTakeover(team){
+
+const card=document.querySelector(".team-card");
+
+// Blue scan
+card.classList.add("scanning");
+
+await sleep(1200);
+
+card.classList.remove("scanning");
+
+// Red
+card.classList.add("leave");
+
+await sleep(1000);
+
+// Spin organisations
+await showTeamRoulette(team);
+
+// Change organisation
+team.team=team.replacementTeam;
+
+scanState=[];
+
+renderTeam();
+
+// New card after render
+const newCard=document.querySelector(".team-card");
+
+newCard.classList.remove("leave");
+newCard.classList.remove("scanning");
+
+newCard.classList.add("stay");
+
+await sleep(1800);
+
+// Don't remove stay yet
+
+}
+
 document.getElementById("prevBtn").onclick=()=>{
 
 currentTeam--;
@@ -709,6 +956,10 @@ if(currentTeam<0)
 currentTeam=offseasonData.length-1;
 
 scanState=[];
+
+document
+.querySelector(".team-card")
+.classList.remove("flyaway","disband","leave","scanning","stay");
 
 renderTeam();
 
@@ -722,6 +973,10 @@ if(currentTeam>=offseasonData.length)
 currentTeam=0;
 
 scanState=[];
+
+document
+.querySelector(".team-card")
+.classList.remove("flyaway","disband","leave","scanning","stay");
 
 renderTeam();
 
@@ -759,7 +1014,7 @@ Signing Replacement
 
 <div id="signingName"></div>
 
-<div class="signingLabel">
+<div class="signingLabel" id="signingLabel">
 NEW SIGNING
 </div>
 

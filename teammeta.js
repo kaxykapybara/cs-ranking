@@ -2126,6 +2126,12 @@ logo:"noir.png",
 color:"#fc8e8e"
 },
 
+"Luminosity":{
+fullname:"Luminosity Gaming",
+logo:"luminosity.png",
+color:"#0bbef5"
+},
+
 "Oxuji":{
 fullname:"Oxuji Esports",
 logo:"Oxuji.png",
