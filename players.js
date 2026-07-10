@@ -530,7 +530,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/Mdc2qZZptN3d3jGfXraSjk.png?ixlib=
 
 "xfl0ud":{
 country:"Türkiye",
-photo:"https://img-cdn.hltv.org/playerbodyshot/wRfFsHlZc3HmOPKxScfQho.png?ixlib=java-2.1.0&w=400&s=5e1620f2762b4da8e269fe673997550d"
+photo:"https://img-cdn.hltv.org/playerbodyshot/yTyKt5QTtDhtTOTIUuRtOd.png?ixlib=java-2.1.0&w=400&s=80bf4967b6a633bbc0e989fb066b20b5"
 },
 
 "yxngstxr":{
