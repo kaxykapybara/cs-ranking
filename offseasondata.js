@@ -201,7 +201,7 @@ players:[
 "cobrazera",
 {
 player:"mzinho",
-replacement:"oskar"
+replacement:"tikuak"
 },
 "Techno",
 "maaRaa"
@@ -627,12 +627,18 @@ players:[
 "EliGE",
 "malbsMd",
 "NAF",
-"siuhy",
+{
+player:"siuhy",
+replacement:"JT"
+},
 {
 player:"ultimate",
 replacement:"Jorko"
 },
-"flashie"
+{
+player:"flashie",
+replacement:"T.c"
+}
 ]
 
 },

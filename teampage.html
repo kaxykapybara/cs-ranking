@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Team Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+padding:30px;
+}
+
+.container{
+max-width:1500px;
+margin:auto;
+}
+
+.home-btn{
+display:inline-block;
+background:#212936;
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:700;
+margin-bottom:28px;
+transition:.2s;
+}
+
+.home-btn:hover{
+background:#2b3442;
+}
+
+.team-card{
+position:relative;
+background:linear-gradient(180deg,#1b212b,#161b22);
+border-radius:18px;
+border:1px solid rgba(255,255,255,.05);
+overflow:hidden;
+}
+
+.team-card::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:4px;
+height:100%;
+background:var(--team-color);
+box-shadow:0 0 12px var(--team-color);
+}
+
+.team-main{
+display:flex;
+align-items:center;
+padding:40px;
+}
+
+.logo{
+width:110px;
+height:110px;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-right:30px;
+flex-shrink:0;
+}
+
+.logo img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+}
+
+.team-info{
+flex:1;
+}
+
+.team-name-row{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:12px;
+}
+
+.team-name{
+font-size:52px;
+font-weight:800;
+}
+
+.team-flag{
+width:30px;
+height:22px;
+border-radius:4px;
+}
+
+.points{
+font-size:22px;
+color:#8fa4c7;
+}
+
+.roster{
+font-size:22px;
+color:#9ca3af;
+margin-top:8px;
+}
+
+.region-badge{
+margin-left:auto;
+padding:8px 14px;
+border-radius:999px;
+font-size:13px;
+font-weight:800;
+letter-spacing:.6px;
+}
+
+.region-eu{
+background:#2563eb;
+}
+
+.region-am{
+background:#dc2626;
+}
+
+.region-as{
+background:#eab308;
+color:black;
+}
+
+.team-extra{
+padding:0 40px 40px;
+}
+
+.team-extra-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px;
+}
+
+.player-card{
+background:#11161f;
+border-radius:18px;
+overflow:hidden;
+}
+
+.player-image{
+height:240px;
+background:#0b1017;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+overflow:hidden;
+}
+
+.player-image img{
+width:100%;
+height:auto;
+object-fit:contain;
+transform:scale(1.4) translateY(38px);
+}
+
+.player-info{
+padding:14px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+}
+
+.player-info img{
+width:18px;
+height:13px;
+border-radius:3px;
+}
+
+.player-name{
+font-size:17px;
+font-weight:700;
+}
+
+</style>
+
+<script src="players.js"></script>
+<script src="countries.js"></script>
+<script src="teammeta.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="standings.html" class="home-btn">
+← Back to Rankings
+</a>
+
+<div class="team-card">
+
+<div class="team-main">
+
+<div class="logo">
+<img id="teamLogo">
+</div>
+
+<div class="team-info">
+
+<div class="team-name-row">
+
+<div class="team-name" id="teamName"></div>
+
+<img
+class="team-flag"
+id="teamFlag"
+>
+
+<div class="points" id="teamPoints"></div>
+
+<div
+class="region-badge"
+id="teamRegion"
+></div>
+
+</div>
+
+<div
+class="roster"
+id="teamRank"
+></div>
+
+</div>
+
+</div>
+
+<div class="team-extra">
+
+<h2 style="margin-bottom:20px;">
+Players
+</h2>
+
+<div
+class="team-extra-grid"
+id="playersGrid"
+></div>
+
+<h2 style="margin:35px 0 20px;">
+Coach
+</h2>
+
+<div
+class="team-extra-grid"
+id="coachGrid"
+></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+    const params=new URLSearchParams(location.search);
+
+const source=params.get("team");
+
+function determineFlag(players){
+
+const countryCount={};
+const continentCount={};
+
+players.forEach(player=>{
+
+const info=playerData[player];
+
+if(!info) return;
+
+countryCount[info.country]=(countryCount[info.country]||0)+1;
+
+const continent=countryData[info.country]?.continent;
+
+if(!continent) return;
+
+continentCount[continent]=(continentCount[continent]||0)+1;
+
+});
+
+for(const c in countryCount){
+
+if(countryCount[c]>=3)
+return c;
+
+}
+
+for(const c in continentCount){
+
+if(continentCount[c]>=3)
+return c;
+
+}
+
+return "World";
+
+}
+
+function determineRegion(players){
+
+const regions={};
+
+players.forEach(player=>{
+
+const info=playerData[player];
+
+if(!info) return;
+
+const region=
+countryData[info.country]?.vrs;
+
+if(!region) return;
+
+regions[region]=(regions[region]||0)+1;
+
+});
+
+let best="eu";
+let amount=0;
+
+for(const region in regions){
+
+if(regions[region]>amount){
+
+amount=regions[region];
+best=region;
+
+}
+
+}
+
+return best;
+
+}
+
+
+
+loadTeam();
+
+async function loadTeam(){
+
+const response=
+await fetch("standings_global_2026_07_06.md");
+
+const md=await response.text();
+
+const line=md
+.split("\n")
+.find(line=>{
+
+const cols=line.split("|").map(x=>x.trim());
+
+return cols[3]===source;
+
+});
+
+if(!line) return;
+
+const cols=line
+.split("|")
+.map(x=>x.trim());
+
+const rank=parseInt(cols[1]);
+const points=parseInt(cols[2]);
+
+const roster=
+cols[4]
+.split(",")
+.map(x=>x.trim());
+
+const meta=teamMeta[source];
+
+console.log(source);
+console.log(meta);
+
+document.querySelector(".team-card").style.setProperty(
+"--team-color",
+meta.color
+);
+
+document.getElementById("teamLogo").src=
+"logos/"+meta.logo;
+
+document.getElementById("teamName").innerText=
+meta.fullname;
+
+document.getElementById("teamPoints").innerText=
+points+" pts";
+
+document.getElementById("teamRank").innerText=
+"#"+rank+" World";
+
+const country=
+meta.rewriteFlag||
+determineFlag(roster);
+
+document.getElementById("teamFlag").src=
+"flags/"+country+".svg";
+
+const region=
+meta.rewriteVRS||
+determineRegion(roster);
+
+const badge=
+document.getElementById("teamRegion");
+
+badge.innerText=
+region=="eu"
+?"EUROPE"
+:region=="am"
+?"AMERICA"
+:"ASIA";
+
+badge.className=
+"region-badge region-"+region;
+
+const players=
+document.getElementById("playersGrid");
+
+const coach=
+document.getElementById("coachGrid");
+
+players.innerHTML="";
+coach.innerHTML="";
+
+roster.forEach((name,index)=>{
+
+const data=playerData[name];
+
+if(!data) return;
+
+const photo=
+data.teamPhotos?.[source]
+||
+data.photo;
+
+const html=`
+
+<div class="player-card">
+
+<div class="player-image">
+
+<img src="${photo}">
+
+</div>
+
+<div class="player-info">
+
+<img src="flags/${data.country}.svg">
+
+<div class="player-name">
+
+${data.nickname||name}
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+if(index===5){
+
+coach.innerHTML=html;
+
+}else{
+
+players.innerHTML+=html;
+
+}
+
+});
+
+}
+
+    </script>
+
+</body>
+</html>

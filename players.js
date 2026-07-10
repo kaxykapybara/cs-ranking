@@ -2772,7 +2772,7 @@ photo:"ps/ps-.png"
 
 "T.c":{
 country:"South Africa",
-photo:"ps/ps-.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/mbMwCSM4t4XIz40VejVo9h.png?ixlib=java-2.1.0&w=400&s=8b05b04aeaa1c0d37a5da314e175f958"
 },
 
 "chucky":{
