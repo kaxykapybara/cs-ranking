@@ -1379,10 +1379,10 @@ renderTeams();
 
 function renderTeams(){
 
-const rankings=
+const rankings =
 document.getElementById("rankings");
 
-rankings.innerHTML="";
+let html = "";
 
 const regionalRanks={
 eu:0,
@@ -1411,7 +1411,7 @@ regionalMode
 ? ++regionalRanks[region]
 : team.rank;
 
-rankings.innerHTML+=`
+html += `
 
 <div
 class="team-card"
@@ -1475,20 +1475,50 @@ player
 
 </div>
 
-<div class="team-extra">
+<div class="team-extra"></div>
+
+</div>
+
+`;
+
+});
+
+rankings.innerHTML = html;
+
+attachCardEvents();
+
+}
+
+
+
+function attachCardEvents(){
+
+document
+.querySelectorAll(".team-card")
+.forEach((card,index)=>{
+
+card.addEventListener("click",()=>{
+
+card.classList.toggle("open");
+
+const extra=card.querySelector(".team-extra");
+
+if(extra.dataset.loaded) return;
+
+const team=teams[index];
+
+extra.innerHTML=`
 
 <div class="team-extra-grid">
 
 ${team.players.map(player=>{
 
-const data=
-playerData[player];
+const data=playerData[player];
 
 if(!data) return "";
 
 const flagShown=
-data.flagshown||
-data.country;
+data.flagshown||data.country;
 
 const photo=
 data.teamPhotos?.[team.team]
@@ -1505,20 +1535,18 @@ return`
 
 <img
 src="${photo}"
-alt="${player}"
->
+alt="${player}">
 
 </div>
 
 <div class="player-info">
 
-<img
-src="flags/${flagShown}.svg"
-title="${flagShown}"
->
+<img src="flags/${flagShown}.svg">
 
 <div class="player-name">
-${data.nickname || player}
+
+${data.nickname||player}
+
 </div>
 
 </div>
@@ -1530,30 +1558,9 @@ ${data.nickname || player}
 }).join("")}
 
 </div>
-
-</div>
-
-</div>
-
 `;
 
-});
-
-attachCardEvents();
-
-}
-
-
-
-function attachCardEvents(){
-
-document
-.querySelectorAll(".team-card")
-.forEach(card=>{
-
-card.addEventListener("click",()=>{
-
-card.classList.toggle("open");
+extra.dataset.loaded=true;
 
 });
 

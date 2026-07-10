@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>CS Off-Season</title>
+
+<title>Official VRS CS Global Rankings</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -23,749 +25,1854 @@ padding:30px;
 }
 
 .container{
-max-width:1500px;
+max-width:1300px;
 margin:auto;
+padding-left:180px;
 }
 
-.topbar{
+.sidebar{
+position:fixed;
+left:20px;
+top:20px;
+width:220px;
+z-index:1000;
+}
+
+.sidebar-card{
+background:#161b22;
+border:1px solid rgba(255,255,255,.05);
+border-radius:14px;
+padding:18px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.sidebar-title{
+font-size:18px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.sidebar-link{
+width:100%;
+background:#212936;
+border:none;
+color:white;
+padding:12px;
+border-radius:10px;
+cursor:pointer;
+font-weight:700;
+transition:.2s;
+text-align:left;
+}
+
+.sidebar-link:hover{
+background:#2b3442;
+}
+
+.sidebar-subtitle{
+font-size:11px;
+color:#8b949e;
+margin-top:4px;
+}
+
+.sidebar-link img{
+width:20px;
+height:14px;
+object-fit:cover;
+border-radius:3px;
+margin-right:8px;
+vertical-align:middle;
+}
+
+.header{
 display:flex;
 justify-content:space-between;
-align-items:center;
+align-items:flex-start;
 margin-bottom:25px;
+gap:20px;
 }
 
-.left-nav{
+.left-side{
+display:flex;
+flex-direction:column;
+}
+
+.sidebar-section{
+margin-top:12px;
+}
+
+.sidebar-title-small{
+font-size:14px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.mode-switch{
+display:flex;
+gap:6px;
+margin-bottom:10px;
+}
+
+.mode-btn{
+flex:1;
+
+padding:8px;
+
+border:none;
+
+border-radius:8px;
+
+background:#212936;
+
+color:white;
+
+cursor:pointer;
+
+font-size:12px;
+
+font-weight:700;
+}
+
+.mode-btn.active{
+background:#2563eb;
+}
+
+.floating-menu{
+display:none;
+
+position:fixed;
+
+left:235px;
+top:260px;
+
+width:240px;
+
+max-height:500px;
+
+overflow-y:auto;
+
+background:#161b22;
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:12px;
+
+padding:8px;
+
+z-index:9999;
+
+box-shadow:0 12px 30px rgba(0,0,0,.5);
+
+flex-direction:column;
+gap:6px;
+}
+
+.continent-btn{
+background:#1b212b;
+
+border:none;
+
+color:white;
+
+padding:8px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+text-align:left;
+}
+
+.continent-btn:hover{
+background:#2b3442;
+}
+
+.country-btn{
+background:#1b212b;
+
+border:none;
+
+color:white;
+
+padding:8px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+text-align:left;
+}
+
+.country-btn:hover{
+background:#2b3442;
+}
+
+.menu-flag{
+width:20px;
+height:14px;
+
+object-fit:cover;
+
+border-radius:3px;
+
+margin-right:8px;
+}
+
+.continent-btn,
+.country-btn{
 display:flex;
 align-items:center;
+gap:8px;
+}
+
+.continent-btn.active,
+.country-btn.active{
+background:rgba(255,255,255,.08);
+
+font-weight:700;
+}
+
+.sidebar-section{
+margin-top:10px;
+padding-top:12px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.title{
+font-size:36px;
+font-weight:700;
+}
+
+.subtitle{
+font-size:13px;
+color:#8b949e;
+margin-top:5px;
+}
+
+
+
+.filters{
+display:flex;
+gap:12px;
+margin-top:18px;
+}
+
+.filter-btn{
+padding:8px 18px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+border:none;
+color:white;
+opacity:.65;
+}
+
+.filter-btn:hover{
+opacity:1;
+transform:translateY(-1px);
+}
+
+.filter-btn.active{
+opacity:1;
+}
+
+.filter-eu{
+background:#2563eb;
+box-shadow:0 0 14px rgba(37,99,235,.55);
+}
+
+.filter-am{
+background:#dc2626;
+box-shadow:0 0 14px rgba(220,38,38,.55);
+}
+
+.filter-as{
+background:#eab308;
+color:black;
+box-shadow:0 0 14px rgba(234,179,8,.55);
+}
+
+
+
+.search{
+background:#161b22;
+border:none;
+outline:none;
+padding:12px 16px;
+border-radius:10px;
+color:white;
+width:260px;
+font-size:14px;
+height:45px;
+}
+
+
+
+.rankings{
+display:flex;
+flex-direction:column;
 gap:12px;
 }
 
-.home-btn,
-.nav-btn{
-background:#161b22;
-border:1px solid rgba(255,255,255,.05);
-color:white;
-padding:12px 18px;
-border-radius:12px;
-font-weight:700;
-text-decoration:none;
-cursor:pointer;
-transition:.2s;
-}
 
-.home-btn:hover,
-.nav-btn:hover{
-background:#212936;
-transform:translateY(-2px);
-}
 
 .team-card{
+position:relative;
 background:linear-gradient(180deg,#1b212b,#161b22);
+border-radius:14px;
 border:1px solid rgba(255,255,255,.05);
-border-radius:22px;
-padding:45px;
 overflow:hidden;
+transition:.3s;
+cursor:pointer;
 }
 
-.team-header{
+.team-card:hover{
+transform:translateY(-2px);
+background:#202734;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.team-card::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:4px;
+height:100%;
+background:var(--team-color);
+box-shadow:0 0 12px var(--team-color);
+}
+
+
+
+.team-main{
 display:flex;
 align-items:center;
-gap:18px;
-margin-bottom:35px;
+padding:18px 22px;
+min-height:108px;
 }
 
-.team-logo{
-width:80px;
-height:80px;
+
+
+.rank{
+width:55px;
+
+font-size:24px;
+font-weight:700;
+color:#b4bcc8;
+
+text-align:right;
+
+padding-right:12px;
+
+flex-shrink:0;
+}
+
+
+
+.logo{
+width:70px;
+height:70px;
+
+margin-left:12px;
+
+margin-right:24px;
+
 display:flex;
+align-items:center;
 justify-content:center;
-align-items:center;
 }
 
-.team-logo img{
+.logo img{
 max-width:100%;
 max-height:100%;
 object-fit:contain;
 }
 
+
+
+.team-info{
+flex:1;
+}
+
+.team-name-row{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:6px;
+}
+
 .team-name{
-font-size:42px;
+font-size:24px;
 font-weight:700;
 }
 
-.players{
-display:flex;
-gap:18px;
-margin-bottom:40px;
+.team-flag{
+width:24px;
+height:17px;
+object-fit:cover;
+border-radius:4px;
 }
 
-.player-column{
-flex:1;
-background:#212936;
-border-radius:18px;
-border:2px solid transparent;
-padding:20px;
-display:flex;
-flex-direction:column;
-align-items:center;
-transition:.25s;
-min-height:390px;
-overflow:hidden;
+.points{
+font-size:14px;
+color:#8fa4c7;
 }
 
-.coach-column{
-margin-left:40px;
-background:#1d2430;
-}
-
-.coach-role{
-margin-top:8px;
+.roster{
 font-size:13px;
-font-weight:600;
-color:#8b949e;
-letter-spacing:.5px;
-text-transform:uppercase;
+color:#7d8590;
+transition:.25s;
 }
 
-.player-column:hover{
-transform:translateY(-4px);
+.team-card.open .roster{
+opacity:0;
+max-height:0;
+overflow:hidden;
+margin-top:-6px;
 }
+
+
+
+.region-badge{
+margin-left:auto;
+padding:6px 12px;
+border-radius:999px;
+font-size:11px;
+font-weight:800;
+letter-spacing:.6px;
+color:white;
+}
+
+.region-eu{
+background:#2563eb;
+box-shadow:0 0 12px rgba(37,99,235,.5);
+}
+
+.region-am{
+background:#dc2626;
+box-shadow:0 0 12px rgba(220,38,38,.5);
+}
+
+.region-as{
+background:#eab308;
+color:black;
+box-shadow:0 0 12px rgba(234,179,8,.5);
+}
+
+
+
+.arrow{
+font-size:18px;
+color:#8b949e;
+margin-left:18px;
+transition:.3s;
+}
+
+.team-card.open .arrow{
+transform:rotate(180deg);
+}
+
+
+
+.team-extra{
+max-height:0;
+overflow:hidden;
+opacity:0;
+transition:.35s ease;
+}
+
+.team-card.open .team-extra{
+max-height:520px;
+opacity:1;
+padding:0 22px 22px 22px;
+}
+
+
+
+.team-extra-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:16px;
+margin-top:4px;
+width:100%;
+}
+
+
+
+.player-card{
+background:#11161f;
+border:1px solid rgba(255,255,255,.05);
+border-radius:16px;
+overflow:hidden;
+transition:.25s;
+}
+
+.player-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 24px rgba(0,0,0,.45);
+}
+
+
 
 .player-image{
-width:100%;
-height:310px;
-background:#161b22;
-border-radius:14px;
+height:175px;
+background:#0b1017;
 overflow:hidden;
 position:relative;
 display:flex;
+align-items:flex-start;
 justify-content:center;
-align-items:flex-end;
-margin-bottom:18px;
 }
 
-.player-photo{
-position:absolute;
-left:50%;
-bottom:-125px;
-transform:translateX(-50%) scale(1);
-transform-origin:bottom center;
-pointer-events:none;
-user-select:none;
+.player-image img{
+width:100%;
+height:auto;
+object-fit:contain;
+object-position:center top;
+transform:scale(1.36) translateY(30px);
+filter:drop-shadow(0 10px 20px rgba(0,0,0,.45));
+}
+
+
+
+.player-info{
+padding:12px;
+display:flex;
+align-items:center;
+gap:8px;
+justify-content:center;
+}
+
+.player-info img{
+width:18px;
+height:13px;
+object-fit:cover;
+border-radius:3px;
+flex-shrink:0;
 }
 
 .player-name{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-font-size:20px;
-font-weight:700;
-}
-
-.player-flag{
-width:22px;
-height:16px;
-border-radius:3px;
-object-fit:cover;
-}
-
-.scan-btn{
-display:block;
-margin:auto;
-padding:18px 42px;
-background:#2563eb;
-border:none;
-border-radius:14px;
-color:white;
-font-size:18px;
-font-weight:700;
-cursor:pointer;
-transition:.2s;
-}
-
-.scan-btn:hover{
-background:#3b82f6;
-transform:translateY(-2px);
-}
-
-.player-column.scanning{
-background:#2563eb;
-}
-
-.player-column.stay{
-background:#16a34a;
-}
-
-.player-column.leave{
-background:#dc2626;
-}
-
-#rouletteOverlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.75);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:99999;
-backdrop-filter:blur(6px);
-}
-
-#rouletteWindow{
-width:500px;
-background:#161b22;
-border-radius:18px;
-padding:25px;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.rouletteTitle{
-font-size:26px;
-font-weight:700;
-text-align:center;
-margin-bottom:20px;
-}
-
-#rouletteViewport{
-height:300px;
-overflow:hidden;
-background:#0d1117;
-border-radius:12px;
-position:relative;
-}
-
-#rouletteViewport::after{
-content:"";
-position:absolute;
-left:0;
-right:0;
-top:125px;
-height:50px;
-border-top:2px solid #3b82f6;
-border-bottom:2px solid #3b82f6;
-box-shadow:0 0 30px rgba(59,130,246,.7);
-background:rgba(59,130,246,.08);
-pointer-events:none;
-}
-
-#rouletteList{
-transition:transform 5s cubic-bezier(.15,.8,.15,1);
-}
-
-.roulettePlayer{
-height:50px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-font-size:18px;
-font-weight:700;
-}
-
-.roulettePlayer img{
-width:22px;
-height:16px;
-border-radius:3px;
-}
-
-.roulettePlayer{
-height:50px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-font-size:18px;
-font-weight:700;
-opacity:.35;
-transition:.25s;
-}
-
-.roulettePlayer.active{
-opacity:1;
-color:white;
-font-size:22px;
-font-weight:800;
-text-shadow:0 0 14px #2563eb;
-}
-
-#signingOverlay{
-position:fixed;
-inset:0;
-display:none;
-justify-content:center;
-align-items:center;
-background:rgba(0,0,0,.82);
-backdrop-filter:blur(6px);
-z-index:100000;
-}
-
-#signingCard{
-background:linear-gradient(180deg,#1b212b,#161b22);
-border:1px solid rgba(255,255,255,.08);
-border-radius:24px;
-padding:45px;
-width:520px;
-text-align:center;
-box-shadow:0 25px 70px rgba(0,0,0,.6);
-animation:signAppear .35s;
-}
-
-#signingCard img{
-width:320px;
-height:380px;
-object-fit:contain;
-filter:drop-shadow(0 18px 30px rgba(0,0,0,.45));
-}
-
-#signingName{
-margin-top:18px;
-font-size:42px;
-font-weight:800;
-}
-
-.signingLabel{
-margin-top:8px;
 font-size:15px;
 font-weight:700;
-letter-spacing:5px;
-color:#3b82f6;
-text-transform:uppercase;
+color:white;
 }
 
-@keyframes signAppear{
-from{
-opacity:0;
-transform:scale(.8);
-}
-to{
-opacity:1;
-transform:scale(1);
-}
+.menu-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:6px 6px 10px 6px;
+
+font-weight:700;
 }
 
+.close-menu{
+background:none;
+border:none;
+color:#8b949e;
 
+font-size:18px;
+
+cursor:pointer;
+}
+
+.close-menu:hover{
+color:white;
+}
+
+.home-btn{
+display:block;
+width:100%;
+background:#212936;
+border:none;
+color:white;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+transition:.2s;
+text-align:left;
+margin-bottom:12px;
+}
+
+.home-btn:hover{
+background:#2b3442;
+}
 
 </style>
-
-<script src="players.js"></script>
-<script src="teammeta.js"></script>
-<script src="offseasondata.js"></script>
 
 </head>
 
 <body>
 
-<div class="container">
+<div id="continentMenu" class="floating-menu"></div>
 
-<div class="topbar">
+<div id="countryMenu" class="floating-menu"></div>
 
-<div class="left-nav">
+<div class="sidebar">
 
+<div class="sidebar-card">
+    
 <a href="index.html" class="home-btn">
 ← Home
-</a>
+</a>        
 
-<button class="nav-btn" id="prevBtn">
-◀
+<div class="sidebar-title">
+Rankings
+</div>
+
+<button
+class="sidebar-link"
+id="experimentalBtn"
+>
+
+Beyond 100
+
+<div class="sidebar-subtitle">
+Experimental
+</div>
+
+</button>
+
+<button
+class="sidebar-link"
+id="regionalBtn"
+>
+
+Regional Rankings
+
+<div class="sidebar-subtitle">
+Global Mode
+</div>
+
+</button>
+
+<div class="sidebar-section">
+
+<div class="sidebar-title-small">
+Nationality Rankings
+</div>
+
+<div class="mode-switch">
+
+<button
+class="mode-btn active"
+id="coreBtn"
+>
+Core
+</button>
+
+<button
+class="mode-btn"
+id="playerBtn"
+>
+Player
 </button>
 
 </div>
 
-<button class="nav-btn" id="nextBtn">
-▶
-</button>
+<button
+class="sidebar-link"
+id="continentsBtn"
+>
 
+Continents
+
+<div class="sidebar-subtitle">
+Select Region
 </div>
 
-<div class="team-card">
-
-<div class="team-header">
-
-<div class="team-logo">
-<img id="teamLogo">
-</div>
-
-<div class="team-name" id="teamName"></div>
-
-</div>
-
-<div class="players" id="players"></div>
-
-<button class="scan-btn" id="scanBtn">
-Scan Roster
 </button>
 
 </div>
 
 </div>
+
+</div>
+
+<div class="container">
+
+<div class="header">
+
+<div class="left-side">
+
+<div class="title">
+CS Global Rankings
+</div>
+
+<div class="subtitle">
+Updated 7th of July 2026
+</div>
+
+<div class="filters">
+
+<button class="filter-btn filter-eu active" data-region="eu">
+EUROPE
+</button>
+
+<button class="filter-btn filter-am active" data-region="am">
+AMERICA
+</button>
+
+<button class="filter-btn filter-as active" data-region="as">
+ASIA
+</button>
+
+</div>
+
+</div>
+
+<input
+class="search"
+placeholder="Search team..."
+id="searchInput"
+/>
+
+</div>
+
+<div class="rankings" id="rankings"></div>
+
+<script src="countries.js"></script>
+<script src="players.js"></script>
+<script src="teammeta.js"></script>
 
 <script>
 
-let currentTeam=0;
-let scanState=[];
+let teams=[];
+let showBeyond100=false;
+let regionalMode=false;
 
-function renderTeam(){
+let nationalityMode="core";
 
-const team=offseasonData[currentTeam];
-const meta=teamMeta[team.team];
+let continentMenuOpen=false;
 
-document.getElementById("teamLogo").src="logos/"+meta.logo;
-document.getElementById("teamName").innerText=meta.fullname;
+let selectedContinent=null;
 
-const players=document.getElementById("players");
-players.innerHTML="";
+let selectedCountries=[];
 
-team.players.forEach((slot,index)=>{
+let multiSelect=false;
 
-let playerName=typeof slot==="string"
-?slot
-:slot.player;
+let visibleContinent=null;
 
-const player=playerData[playerName];
+function determineFlag(players){
 
-const isCoach=index===team.players.length-1;
+const countryCount={};
+const continentCount={};
 
-players.innerHTML+=`
+players.forEach(player=>{
 
-<div
-class="player-column ${isCoach?"coach-column":""}"
-id="player-${index}"
->
+const playerInfo=playerData[player];
 
-<div class="player-image">
+if(!playerInfo) return;
 
-<img
-class="player-photo"
-src="${player.photo}"
->
+const country=playerInfo.country;
 
-</div>
+countryCount[country]=(countryCount[country]||0)+1;
 
-<div class="player-name">
+const countryInfo=countryData[country];
 
-<img
-class="player-flag"
-src="flags/${player.country}.svg"
->
+if(!countryInfo) return;
 
-${playerName}
+const continent=countryInfo.continent;
 
-</div>
-
-${isCoach?'<div class="coach-role">Coach</div>':""}
-
-</div>
-
-`;
+continentCount[continent]=(continentCount[continent]||0)+1;
 
 });
 
-scanState.forEach((state,i)=>{
+for(const country in countryCount){
 
-if(!state) return;
+if(countryCount[country]>=3){
+return country;
+}
 
-const card=document.getElementById("player-"+i);
+}
 
-if(card)
-card.classList.add(state);
+for(const continent in continentCount){
+
+if(continentCount[continent]>=3){
+return continent;
+}
+
+}
+
+return "World";
+
+}
+
+
+
+function determineRegion(players){
+
+const regionCount={};
+
+players.forEach(player=>{
+
+const playerInfo=playerData[player];
+
+if(!playerInfo) return;
+
+const countryInfo=countryData[playerInfo.country];
+
+if(!countryInfo) return;
+
+const region=countryInfo.vrs;
+
+regionCount[region]=(regionCount[region]||0)+1;
 
 });
 
-}
+let highestRegion="eu";
+let highestCount=0;
 
-function sleep(ms){
-return new Promise(resolve=>setTimeout(resolve,ms));
-}
+for(const region in regionCount){
 
-async function showSigning(player,index){
+if(regionCount[region]>highestCount){
 
-const overlay=document.getElementById("signingOverlay");
-
-overlay.style.display="flex";
-
-document.getElementById("signingPhoto").src=
-playerData[player].photo;
-
-document.getElementById("signingName").innerText=
-player;
-
-await sleep(2500);
-
-overlay.style.display="none";
-
-document.getElementById("rouletteOverlay").style.display="none";
-
-await sleep(1200);
-
-const team=offseasonData[currentTeam];
-
-team.players[index]=player;
-scanState[index]="stay";
-
-renderTeam();
-
-}
-
-async function scanRoster(){
-
-const team=offseasonData[currentTeam];
-
-for(let i=0;i<team.players.length;i++){
-
-const cards=document.querySelectorAll(".player-column");
-
-cards[i].classList.add("scanning");
-
-await sleep(1200);
-
-cards[i].classList.remove("scanning");
-
-const slot=team.players[i];
-
-if(typeof slot==="object"){
-cards[i].classList.add("leave");
-scanState[i]="leave";
-
-await sleep(1000);
-
-await showRoulette(slot.replacement,team,i);
-
-await sleep(700);
-
-const newCards=document.querySelectorAll(".player-column");
-
-newCards[i].classList.add("stay");
-
-await sleep(900);
-}else{
-cards[i].classList.add("stay");
-scanState[i]="stay";
-}
+highestCount=regionCount[region];
+highestRegion=region;
 
 }
 
 }
 
-function showRoulette(winner,team,index){
+return highestRegion;
 
-return new Promise(resolve=>{
+}
 
-const overlay=document.getElementById("rouletteOverlay");
-const list=document.getElementById("rouletteList");
+const coreBtn=
+document.getElementById("coreBtn");
 
-overlay.style.display="flex";
-list.innerHTML="";
+const playerBtn=
+document.getElementById("playerBtn");
 
-const teammates=[];
+coreBtn.addEventListener("click",()=>{
 
-team.players.forEach(slot=>{
+nationalityMode="core";
 
-teammates.push(typeof slot=="string"?slot:slot.player);
+coreBtn.classList.add("active");
+playerBtn.classList.remove("active");
+
+applyFilters();
 
 });
 
-const pool=[];
+playerBtn.addEventListener("click",()=>{
 
-const replacingCoach=index===team.players.length-1;
+nationalityMode="player";
 
-offseasonData.forEach(t=>{
+playerBtn.classList.add("active");
+coreBtn.classList.remove("active");
 
-t.players.forEach((slot,i)=>{
+applyFilters();
 
-const isCoach=i===t.players.length-1;
+});
 
-if(replacingCoach!==isCoach) return;
+function buildCountryTree(){
 
-const name=typeof slot=="string"
-?slot
-:slot.player;
+const continents={};
 
-if(teammates.includes(name)) return;
+teams.forEach(team=>{
 
-if(name===winner) return;
+team.players.forEach(player=>{
 
-pool.push(name);
+const info=playerData[player];
+
+if(!info) return;
+
+const country=info.country;
+
+const countryInfo=
+countryData[country];
+
+if(!countryInfo) return;
+
+const continent=
+countryInfo.continent;
+
+if(!continents[continent]){
+
+continents[continent]=new Set();
+
+}
+
+continents[continent].add(country);
 
 });
 
 });
 
-pool.sort(()=>Math.random()-.5);
-
-const entries=[];
-
-for(let i=0;i<4;i++){
-
-const shuffled=[...pool].sort(()=>Math.random()-.5);
-
-entries.push(...shuffled);
+return continents;
 
 }
 
-const stopIndex=entries.length-25-Math.floor(Math.random()*20);
-
-entries.splice(stopIndex,0,winner);
-
-entries.forEach(name=>{
-
-const player=playerData[name];
-
-list.innerHTML+=`
-
-<div class="roulettePlayer">
-
-<img src="flags/${player.country}.svg">
-
-${name}
-
-</div>
-
-`;
-
-});
-
-list.style.transition="none";
-list.style.transform="translateY(0px)";
-
-const highlight=setInterval(()=>{
-
-const transform=getComputedStyle(list).transform;
-
-if(transform==="none") return;
-
-const values=transform.match(/matrix.*\((.+)\)/);
-
-if(!values) return;
-
-const y=Math.abs(parseFloat(values[1].split(",")[5]));
-
-const current=Math.round((y+125)/50);
 
 document
-.querySelectorAll(".roulettePlayer")
-.forEach((player,index)=>{
+.getElementById("continentsBtn")
+.addEventListener("click",()=>{
 
-player.classList.toggle(
-"active",
-index===current
+const menu=
+document.getElementById(
+"continentMenu"
+);
+
+if(menu.style.display==="flex"){
+
+menu.style.display="none";
+
+document.getElementById(
+"countryMenu"
+).style.display="none";
+
+return;
+
+}
+
+menu.style.display="flex";
+
+const continents=
+buildCountryTree();
+
+menu.innerHTML=`
+<div class="menu-header">
+
+<div>
+Continents
+</div>
+
+<div>
+
+<button
+class="close-menu"
+id="multiSelectBtn"
+>
+${multiSelect?"✓":"+"}
+</button>
+
+<button
+class="close-menu"
+id="closeContinentMenu"
+>
+✕
+</button>
+
+</div>
+
+</div>
+`;
+
+setTimeout(()=>{
+
+document
+.getElementById(
+"multiSelectBtn"
+)
+.onclick=()=>{
+
+multiSelect=!multiSelect;
+
+document
+.getElementById(
+"multiSelectBtn"
+).innerText=
+multiSelect
+?"✓"
+:"+";
+
+};
+
+document
+.getElementById(
+"closeContinentMenu"
+)
+.onclick=()=>{
+
+menu.style.display="none";
+
+document
+.getElementById(
+"countryMenu"
+).style.display="none";
+
+};
+
+});
+
+const continentOrder=[
+"Europe",
+"North America",
+"South America",
+"Asia",
+"Oceania",
+"Africa",
+"World"
+];
+
+continentOrder.forEach(continent=>{
+
+if(continent==="World"){
+
+const btn=
+document.createElement("button");
+
+btn.className=
+"continent-btn";
+
+btn.innerHTML=`
+<img
+class="menu-flag"
+src="flags/World.svg"
+>
+World
+`;
+
+btn.onclick=()=>{
+
+selectedContinent=null;
+selectedCountries=[];
+
+document
+.querySelectorAll(".continent-btn")
+.forEach(button=>{
+
+button.classList.remove("active");
+
+});
+
+document
+.querySelectorAll(".country-btn")
+.forEach(button=>{
+
+button.classList.remove("active");
+
+});
+
+updateNationalityButton();
+
+applyFilters();
+
+};
+
+menu.appendChild(btn);
+
+return;
+
+}
+
+if(!continents[continent]) return;
+
+const btn=
+document.createElement("button");
+
+btn.className=
+"continent-btn";
+
+btn.innerHTML=`
+<img
+class="menu-flag"
+src="flags/${continent}.svg"
+>
+${continent}
+`;
+
+btn.onclick=()=>{
+
+const countryMenu=
+document.getElementById(
+"countryMenu"
+);
+
+const alreadyOpen=
+visibleContinent===continent
+&&
+countryMenu.style.display==="flex";
+
+if(!alreadyOpen){
+
+visibleContinent=continent;
+
+countryMenu.style.display=
+"flex";
+
+countryMenu.style.left=
+"465px";
+
+countryMenu.style.top=
+"180px";
+
+countryMenu.innerHTML=`
+<div class="menu-header">
+
+<div>
+Countries
+</div>
+
+<button
+class="close-menu"
+id="closeCountryMenu"
+>
+✕
+</button>
+
+</div>
+`;
+
+setTimeout(()=>{
+
+document
+.getElementById(
+"closeCountryMenu"
+)
+.onclick=()=>{
+
+countryMenu.style.display=
+"none";
+
+};
+
+});
+
+[...continents[continent]]
+.sort()
+.forEach(country=>{
+
+const countryBtn=
+document.createElement(
+"button"
+);
+
+countryBtn.className=
+"country-btn";
+
+countryBtn.innerHTML=`
+<img
+class="menu-flag"
+src="flags/${country}.svg"
+>
+${country}
+`;
+
+countryBtn.onclick=()=>{
+
+if(
+selectedCountries.length===1
+&&
+selectedCountries[0]===country
+){
+
+selectedCountries=[];
+
+document
+.querySelectorAll(".country-btn")
+.forEach(button=>{
+
+button.classList.remove(
+"active"
 );
 
 });
 
-},20);
+updateNationalityButton();
 
-setTimeout(()=>{
+applyFilters();
 
-const offset=Math.random()*40-20;
+return;
 
-const duration=8+Math.random()*3;
+}
 
-const easings=[
-"cubic-bezier(.05,.95,.15,1)",
-"cubic-bezier(.08,.92,.18,1)",
-"cubic-bezier(.04,.98,.12,1)",
-"cubic-bezier(.10,.90,.20,1)"
+if(multiSelect){
+
+if(selectedCountries.includes(country)){
+
+selectedCountries=
+selectedCountries.filter(
+c=>c!==country
+);
+
+countryBtn.classList.remove(
+"active"
+);
+
+}else{
+
+selectedCountries.push(
+country
+);
+
+countryBtn.classList.add(
+"active"
+);
+
+}
+
+selectedContinent=null;
+
+updateNationalityButton();
+
+applyFilters();
+
+return;
+
+}
+
+document
+.querySelectorAll(".country-btn")
+.forEach(button=>{
+
+button.classList.remove(
+"active"
+);
+
+});
+
+document
+.querySelectorAll(".continent-btn")
+.forEach(button=>{
+
+button.classList.remove(
+"active"
+);
+
+});
+
+selectedCountries=[
+country
 ];
 
-const easing=easings[
-Math.floor(Math.random()*easings.length)
-];
+selectedContinent=null;
 
-list.style.transition=
-`transform ${duration}s ${easing}`;
+countryBtn.classList.add(
+"active"
+);
 
-list.style.transform=
-`translateY(-${stopIndex*50-125+offset}px)`;
+updateNationalityButton();
 
-setTimeout(async()=>{
+applyFilters();
 
-clearInterval(highlight);
+};
 
-list.style.transition="transform .25s ease-out";
-list.style.transform=
-`translateY(-${stopIndex*50-125}px)`;
+countryMenu.appendChild(
+countryBtn
+);
 
-await sleep(250);
-await sleep(2000);
+});
 
-await showSigning(winner,index);
+return;
 
-resolve();
+}
 
-},duration*1000);
+selectedContinent=continent;
 
-},50);
+document
+.querySelectorAll(".continent-btn")
+.forEach(button=>{
+
+button.classList.remove("active");
+
+});
+
+btn.classList.add("active");
+selectedCountries=[];
+updateNationalityButton();
+applyFilters();
+};
+
+menu.appendChild(btn);
+
+});
+
+});
+
+async function loadStandings(){
+
+const response=
+await fetch("standings_global_2026_07_06.md");
+
+const markdown=
+await response.text();
+
+const lines=
+markdown.split("\n");
+
+teams=[];
+
+for(const line of lines){
+
+if(!line.startsWith("|"))
+continue;
+
+const cols=line
+.split("|")
+.map(x=>x.trim());
+
+if(cols.length<6)
+continue;
+
+const rank=
+parseInt(cols[1]);
+
+const points=
+parseInt(cols[2]);
+
+if(isNaN(rank)||isNaN(points))
+continue;
+
+if(!showBeyond100 && rank > 100)
+continue;
+
+const sourceName=
+cols[3];
+
+const roster=
+cols[4];
+
+const players=
+roster
+.split(",")
+.map(x=>x.trim());
+
+const meta=
+teamMeta[sourceName]||{};
+
+teams.push({
+
+rank,
+
+points,
+
+sourceName,
+
+team:
+meta.fullname||
+sourceName,
+
+players,
+
+logo:
+meta.logo||
+"default.png",
+
+color:
+meta.color||
+"#3b82f6",
+
+rewriteFlag:
+meta.rewriteFlag,
+
+rewriteVRS:
+meta.rewriteVRS
 
 });
 
 }
 
-document.getElementById("prevBtn").onclick=()=>{
+renderTeams();
 
-currentTeam--;
+}
 
-if(currentTeam<0)
-currentTeam=offseasonData.length-1;
 
-scanState=[];
 
-renderTeam();
+function renderTeams(){
+
+const rankings =
+document.getElementById("rankings");
+
+let html = "";
+
+const regionalRanks={
+eu:0,
+am:0,
+as:0
+};
+
+teams.forEach(team=>{
+
+const autoFlag=
+determineFlag(team.players);
+
+const autoRegion=
+determineRegion(team.players);
+
+const flag=
+team.rewriteFlag||
+autoFlag;
+
+const region=
+team.rewriteVRS||
+autoRegion;
+
+const displayRank=
+regionalMode
+? ++regionalRanks[region]
+: team.rank;
+
+html += `
+
+<div
+class="team-card"
+data-region="${region}"
+data-team-rank="${team.rank}"
+style="--team-color:${team.color}"
+>
+
+<div class="team-main">
+
+<div class="rank">
+#${displayRank}
+</div>
+
+<div class="logo">
+<img src="logos/${team.logo}">
+</div>
+
+<div class="team-info">
+
+<div class="team-name-row">
+
+<div class="team-name">
+${team.team}
+</div>
+
+<img
+class="team-flag"
+src="flags/${flag}.svg"
+title="${flag}"
+>
+
+<div class="points">
+${team.points} pts
+</div>
+
+<div class="region-badge region-${region}">
+${region==="eu"
+?"EUROPE"
+:region==="am"
+?"AMERICA"
+:"ASIA"}
+</div>
+
+</div>
+
+<div class="roster">
+${team.players
+.map(player=>
+playerData[player]?.nickname
+||
+player
+)
+.join(" • ")}
+</div>
+</div>
+
+<div class="arrow">
+▲
+</div>
+
+</div>
+
+<div class="team-extra"></div>
+
+</div>
+
+`;
+
+});
+
+rankings.innerHTML = html;
+
+attachCardEvents();
+
+}
+
+
+
+function attachCardEvents(){
+
+document
+.querySelectorAll(".team-card")
+.forEach((card,index)=>{
+
+card.addEventListener("click",()=>{
+
+card.classList.toggle("open");
+
+const extra=card.querySelector(".team-extra");
+
+if(extra.dataset.loaded) return;
+
+const team=teams[index];
+
+extra.innerHTML=`
+
+<div class="team-extra-grid">
+
+${team.players.map(player=>{
+
+const data=playerData[player];
+
+if(!data) return "";
+
+const flagShown=
+data.flagshown||data.country;
+
+const photo=
+data.teamPhotos?.[team.team]
+||
+data.photo
+||
+"photos/default.png";
+
+return`
+
+<div class="player-card">
+
+<div class="player-image">
+
+<img
+src="${photo}"
+alt="${player}">
+
+</div>
+
+<div class="player-info">
+
+<img src="flags/${flagShown}.svg">
+
+<div class="player-name">
+
+${data.nickname||player}
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+}).join("")}
+
+</div>
+`;
+
+extra.dataset.loaded=true;
+
+});
+
+});
+
+}
+
+
+
+const activeRegions={
+
+eu:true,
+am:true,
+as:true
 
 };
 
-document.getElementById("nextBtn").onclick=()=>{
 
-currentTeam++;
 
-if(currentTeam>=offseasonData.length)
-currentTeam=0;
+document
+.querySelectorAll(".filter-btn")
+.forEach(button=>{
 
-scanState=[];
+button.addEventListener("click",()=>{
 
-renderTeam();
+const region=
+button.dataset.region;
 
-};
+activeRegions[region]=
+!activeRegions[region];
 
-document.getElementById("scanBtn").onclick=scanRoster;
+button.classList.toggle("active");
 
-renderTeam();
+applyFilters();
+
+});
+
+});
+
+
+
+document
+.getElementById("searchInput")
+.addEventListener("keyup",()=>{
+
+applyFilters();
+
+});
+
+
+
+function teamMatchesNationality(team){
+
+if(selectedCountries.length){
+
+let count=0;
+
+team.players.forEach(player=>{
+
+const info=
+playerData[player];
+
+if(
+selectedCountries.includes(
+info?.country
+)
+){
+
+count++;
+
+}
+
+});
+
+return nationalityMode==="core"
+? count>=3
+: count>=1;
+
+}
+
+if(selectedContinent){
+
+let count=0;
+
+team.players.forEach(player=>{
+
+const info=playerData[player];
+
+if(!info) return;
+
+const countryInfo=
+countryData[info.country];
+
+if(!countryInfo) return;
+
+if(
+countryInfo.continent===
+selectedContinent
+){
+
+count++;
+
+}
+
+});
+
+return nationalityMode==="core"
+? count>=3
+: count>=1;
+
+}
+
+return true;
+
+}
+
+function updateNationalityButton(){
+
+const button=
+document.getElementById(
+"continentsBtn"
+);
+
+if(selectedCountries.length){
+
+if(selectedCountries.length===1){
+
+button.innerHTML=`
+<img
+class="menu-flag"
+src="flags/${selectedCountries[0]}.svg"
+>
+
+${selectedCountries[0]}
+
+<div class="sidebar-subtitle">
+${nationalityMode==="core"
+?"Core Mode"
+:"Player Mode"}
+</div>
+`;
+
+}else{
+
+button.innerHTML=`
+${selectedCountries.length} Countries
+
+<div class="sidebar-subtitle">
+${nationalityMode==="core"
+?"Core Mode"
+:"Player Mode"}
+</div>
+`;
+
+}
+
+return;
+
+}
+
+if(selectedContinent){
+
+button.innerHTML=`
+<img
+class="menu-flag"
+src="flags/${selectedContinent}.svg"
+>
+
+${selectedContinent}
+
+<div class="sidebar-subtitle">
+${nationalityMode==="core"
+?"Core Mode"
+:"Player Mode"}
+</div>
+`;
+
+return;
+
+}
+
+button.innerHTML=`
+Continents
+
+<div class="sidebar-subtitle">
+Select Region
+</div>
+`;
+
+}
+
+function applyFilters(){
+
+const search=
+document
+.getElementById("searchInput")
+.value
+.toLowerCase();
+
+let regionalRank=0;
+
+document
+.querySelectorAll(".team-card")
+.forEach(card=>{
+
+const matchesSearch=
+card.innerText
+.toLowerCase()
+.includes(search);
+
+const matchesRegion=
+activeRegions[
+card.dataset.region
+];
+
+const teamRank=
+parseInt(
+card.dataset.teamRank
+);
+
+const team=
+teams.find(
+t=>t.rank===teamRank
+);
+
+const matchesNationality=
+team
+? teamMatchesNationality(team)
+: true;
+
+const visible=
+matchesSearch
+&& matchesRegion
+&& matchesNationality;
+
+card.style.display=
+visible
+?"block"
+:"none";
+
+if(
+regionalMode &&
+visible &&
+(
+selectedCountries.length ||
+selectedContinent
+)
+){
+
+regionalRank++;
+
+card.querySelector(
+".rank"
+).innerText=
+"#"+regionalRank;
+
+}
+
+});
+
+}
+
+document
+.getElementById("experimentalBtn")
+.addEventListener("click",()=>{
+
+showBeyond100=!showBeyond100;
+
+const button=
+document.getElementById("experimentalBtn");
+
+button.innerHTML=
+showBeyond100
+? `Top 100 Only
+<div class="sidebar-subtitle">
+Default
+</div>`
+: `Beyond 100
+<div class="sidebar-subtitle">
+Experimental
+</div>`;
+
+loadStandings();
+
+});
+
+document
+.getElementById("regionalBtn")
+.addEventListener("click",()=>{
+
+regionalMode=!regionalMode;
+
+const button=
+document.getElementById("regionalBtn");
+
+button.innerHTML=
+regionalMode
+? `Global Rankings
+<div class="sidebar-subtitle">
+Regional Mode
+</div>`
+: `Regional Rankings
+<div class="sidebar-subtitle">
+Global Mode
+</div>`;
+
+renderTeams();
+
+});
+
+loadStandings();
 
 </script>
-
-<div id="rouletteOverlay">
-
-<div id="rouletteWindow">
-
-<div class="rouletteTitle">
-Signing Replacement
-</div>
-
-<div id="rouletteViewport">
-
-<div id="rouletteList"></div>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="signingOverlay">
-
-<div id="signingCard">
-
-<img id="signingPhoto">
-
-<div id="signingName"></div>
-
-<div class="signingLabel">
-NEW SIGNING
-</div>
-
-</div>
-
-</div>
-
 </body>
 </html>
