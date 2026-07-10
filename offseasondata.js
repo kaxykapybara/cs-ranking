@@ -720,6 +720,23 @@ replacement:"hallzerk"
 },
 
 {
+team:"K27",
+
+players:[
+{
+player:"fame",
+replacement:"clax"
+},
+"kashl1d",
+"qw1nk1",
+"X5G7V",
+"xeedo",
+"balblna"
+]
+
+},
+
+{
 team:"1win",
 
 players:[
@@ -1068,6 +1085,23 @@ replacement:"Sn0w"
 "KWERTZZ",
 "2high",
 "replay"
+]
+
+},
+
+{
+team:"BRUTE",
+
+players:[
+"aidKiT",
+"hfah",
+"majky",
+"nbqq",
+{
+player:"realzen",
+replacement:"ZEDKO"
+},
+"BARBARR"
 ]
 
 },
