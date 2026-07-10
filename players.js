@@ -1352,27 +1352,27 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/fcO07i0REvntQD_HarJL6R.png?ixlib=
 
 "cronuss":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/GRd1e0i9tKFgwuRkYVsrG2.png?ixlib=java-2.1.0&w=400&s=151a961453968f09006a23530a23db5f"
+photo:"https://img-cdn.hltv.org/playerbodyshot/K4Y6BJ0dQB4w1j2N_CQQ_7.png?ixlib=java-2.1.0&w=400&s=6052c0c5fd684869c8c28df1b8acd963"
 },
 
 "lattykk":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/58EERulRsbZgEGgcq5NNPK.png?ixlib=java-2.1.0&w=400&s=fbf9315ac06598f2a1d95bca2dce0492"
+photo:"https://img-cdn.hltv.org/playerbodyshot/ml56rLqObbuzzAG4eo4tGV.png?ixlib=java-2.1.0&w=400&s=e337a88f146b674842711ccb8f7fe64d"
 },
 
 "oz1k":{
 country:"Russia",
-photo:"https://img-cdn.hltv.org/playerbodyshot/zkCqso-OGLv5cTx4sIuQvY.png?ixlib=java-2.1.0&w=400&s=2c92b910b9e982aad9bd148a2203a78c"
+photo:"https://img-cdn.hltv.org/playerbodyshot/civ76OgrxcSYjQeT1cQ89Z.png?ixlib=java-2.1.0&w=400&s=a490ddbc08fb9d2390fdb33c5b306971"
 },
 
 "Qikert":{
 country:"Kazakhstan",
-photo:"ps/ps-qikert.png"
+photo:"https://img-cdn.hltv.org/playerbodyshot/lv0624OLVYmD7vjNyJjlWy.png?ixlib=java-2.1.0&w=400&s=629fc4c3d945649ced01d93fc585f87d"
 },
 
 "reyoz":{
 country:"Russia",
-photo:""
+photo:"https://img-cdn.hltv.org/playerbodyshot/zjhPRHMguMr9U5SPEYqMfi.png?ixlib=java-2.1.0&w=400&s=c74b52c23775c9059f6e75e826c9bc2e"
 },
 
 
@@ -9416,7 +9416,7 @@ photo:"https://img-cdn.hltv.org/playerbodyshot/IkJ6zMLHpEZoQ3Agf_smQQ.png?ixlib=
 
 "cau":{
 country:"Kazakhstan",
-photo:"https://img-cdn.hltv.org/playerbodyshot/7g031oXFKrRZafHDybj0PE.png?ixlib=java-2.1.0&w=400&s=60790418edf9987bfaadd37316245a44",
+photo:"https://img-cdn.hltv.org/playerbodyshot/7orUsM8-mwoCiScogkMWKT.png?ixlib=java-2.1.0&w=400&s=53fcde5aabd27487c80d89f2b09c57c9",
 },
 
 "vinS":{
