@@ -943,7 +943,10 @@ player:"hades",
 replacement:"kokot"
 },
 "Prism",
-"Bogdan"
+{
+player:"Bogdan",
+replacement:"kokot"
+}
 ]
 
 },
