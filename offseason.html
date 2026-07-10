@@ -60,6 +60,7 @@ transform:translateY(-2px);
 }
 
 .team-card{
+position:relative;
 background:linear-gradient(180deg,#1b212b,#161b22);
 border:1px solid rgba(255,255,255,.05);
 border-radius:22px;
@@ -354,23 +355,52 @@ transform:scale(1);
 }
 
 .team-card.disband{
-
 background:#dc2626;
-
 }
 
 .team-card.flyaway{
-
 transition:transform 1.8s cubic-bezier(.2,.9,.2,1),
 opacity 1.8s;
-
 transform:
 translate(120vw,-120vh)
 rotate(35deg)
 scale(.5);
-
 opacity:0;
+}
 
+.player-column.predicted{
+border:3px solid #f59e0b;
+box-shadow:0 0 18px rgba(245,158,11,.7);
+}
+
+.ratingBox{
+position:absolute;
+right:30px;
+bottom:25px;
+display:grid;
+grid-template-columns:repeat(5,42px);
+gap:8px;
+}
+
+.ratingIcon{
+width:42px;
+height:42px;
+cursor:pointer;
+border-radius:10px;
+padding:3px;
+transition:.2s;
+opacity:.45;
+}
+
+.ratingIcon:hover{
+opacity:1;
+transform:scale(1.08);
+}
+
+.ratingIcon.selected{
+opacity:1;
+background:#2563eb;
+box-shadow:0 0 18px rgba(37,99,235,.7);
 }
 
 </style>
@@ -418,8 +448,9 @@ opacity:0;
 </div>
 
 <div class="players" id="players"></div>
-
+<div class="ratingBox" id="ratingBox"></div>
 <button class="scan-btn" id="scanBtn">
+
 Scan Roster
 </button>
 
@@ -431,6 +462,9 @@ Scan Roster
 
 let currentTeam=0;
 let scanState=[];
+let predictedPlayers=[];
+
+const ratingKey="offseasonRatings";
 
 function renderTeam(){
 
@@ -458,6 +492,7 @@ players.innerHTML+=`
 <div
 class="player-column ${isCoach?"coach-column":""}"
 id="player-${index}"
+onclick="togglePrediction(${index})"
 >
 
 <div class="player-image">
@@ -499,6 +534,17 @@ card.classList.add(state);
 
 });
 
+predictedPlayers.forEach(i=>{
+
+const card=document.getElementById("player-"+i);
+
+if(card)
+card.classList.add("predicted");
+
+});
+
+renderRatings();
+
 }
 
 function sleep(ms){
@@ -530,6 +576,78 @@ const team=offseasonData[currentTeam];
 
 team.players[index]=player;
 scanState[index]="stay";
+
+renderTeam();
+
+}
+
+function getRatings(){
+
+return JSON.parse(
+localStorage.getItem(ratingKey) || "{}"
+);
+
+}
+
+function saveRating(value){
+
+const ratings=getRatings();
+
+ratings[offseasonData[currentTeam].team]=value;
+
+localStorage.setItem(
+ratingKey,
+JSON.stringify(ratings)
+);
+
+renderRatings();
+
+}
+
+function renderRatings(){
+
+const ratings=getRatings();
+
+const current=ratings[
+offseasonData[currentTeam].team
+];
+
+const box=document.getElementById("ratingBox");
+
+let html="";
+
+for(let i=1;i<=10;i++){
+
+html+=`
+<img
+src="icons/${i}.png"
+class="ratingIcon ${current===i?"selected":""}"
+onclick="saveRating(${i})"
+>
+`;
+
+}
+
+box.innerHTML=html;
+
+}
+
+function togglePrediction(index){
+
+if(document.getElementById("rouletteOverlay").style.display==="flex")
+return;
+
+const pos=predictedPlayers.indexOf(index);
+
+if(pos==-1){
+
+predictedPlayers.push(index);
+
+}else{
+
+predictedPlayers.splice(pos,1);
+
+}
 
 renderTeam();
 
@@ -956,6 +1074,7 @@ if(currentTeam<0)
 currentTeam=offseasonData.length-1;
 
 scanState=[];
+predictedPlayers=[];
 
 document
 .querySelector(".team-card")
@@ -973,6 +1092,7 @@ if(currentTeam>=offseasonData.length)
 currentTeam=0;
 
 scanState=[];
+predictedPlayers=[];
 
 document
 .querySelector(".team-card")
